@@ -18,3 +18,4 @@ coverage
 .env
 .env.production
 .yanr.lock
+./yarn.lock
