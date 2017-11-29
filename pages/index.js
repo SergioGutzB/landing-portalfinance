@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'mobx-react';
 import { styles } from '../styles/index.js';
+import Header from '../components/Header/Header';
 
 export default class Index extends React.Component {
   static async getInitialProps({req, res, query, pathname, asPath, jsonPageRes  }) {
@@ -21,13 +22,15 @@ export default class Index extends React.Component {
     }
   }
 
-
   render () {
     const { userAgent } = this.props;
     const { title  } = this.state
     return (
       <Provider userAgent={userAgent}>
-        <h1 style={styles.title}>{title}</h1>
+        <div>
+          <Header />
+          <h1 style={styles.title}>{title}</h1>
+        </div>
       </Provider>
     )
   }

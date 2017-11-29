@@ -1,6 +1,7 @@
 export const styles = {
   title: {
     color: "red",
-    textAlign: "center"
+    textAlign: "center",
+    fontFamily: "Roboto Bold"
   }
 }
