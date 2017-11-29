@@ -6,5 +6,7 @@ export const variables = {
   emerald: "#388787",
   jade: "#00BABA",
   mint: "#000784",
-  cyan: "#00BAF3"
+  cyan: "#00BAF3",
+  white: "#00000",
+  text_gray:"#48484A"
 }
