@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'mobx-react';
 import { styles } from '../styles/index.js';
 import Header from '../components/Header/Header';
+import Home from '../components/Home/Home';
 
 export default class Index extends React.Component {
   static async getInitialProps({req, res, query, pathname, asPath, jsonPageRes  }) {
@@ -29,7 +30,7 @@ export default class Index extends React.Component {
       <Provider userAgent={userAgent}>
         <div>
           <Header />
-          <h1 style={styles.title}>{title}</h1>
+          <Home />
         </div>
       </Provider>
     )
