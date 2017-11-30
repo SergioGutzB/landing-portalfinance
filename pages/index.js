@@ -2,7 +2,11 @@ import React from 'react';
 import { Provider } from 'mobx-react';
 import { styles } from '../styles/index.js';
 import Header from '../components/Header/Header';
+<<<<<<< HEAD
 import Wwd from '../components/Wwd/Wwd';
+=======
+import Home from '../components/Home/Home';
+>>>>>>> 857cfb4d7ed06a470112411d046834827c338144
 
 export default class Index extends React.Component {
   static async getInitialProps({req, res, query, pathname, asPath, jsonPageRes  }) {
@@ -32,6 +36,8 @@ export default class Index extends React.Component {
           <Header title="Portalfinance"/>
           <h1 style={styles.title}>{title}</h1>
           <Wwd/>
+          <Header />
+          <Home />
         </div>
       </Provider>
     )

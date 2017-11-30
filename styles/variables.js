@@ -8,5 +8,7 @@ export const variables = {
   mint: "#000784",
   cyan: "#00BAF3",
   white: "#00000",
-  text_gray:"#48484A"
+  text_gray:"#48484A",
+  mint: "#00D784",
+  cyan: "#00BAF3"
 }
