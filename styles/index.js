@@ -4,8 +4,4 @@ export const styles = {
     textAlign: "center",
     fontFamily: "Roboto Bold"
   },
-  header: {
-    width: '100%',
-    position: 'fixed',
-  }
 }

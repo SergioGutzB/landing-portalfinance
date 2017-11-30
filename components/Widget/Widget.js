@@ -6,21 +6,17 @@ import { styles } from './Widget-style';
 
 export default class Widget extends React.Component {
 
-    constructor(props, context) {
-        super(props, context);
-      }
+  render(){
+    const {icon, title, text} = this.props;
 
-    render(){
-
-        return (
-            <div style={styles.container}>
-                <div style={styles.title}>
-                    
-                </div>
-            </div>
-        )
-
-    }
+    return (
+      <div style={styles.container} >
+        <img src={icon} style={styles.icon} />
+        <h2 style={styles.title}>{title}</h2>
+        <p style={styles.text}>{text}</p>
+      </div>
+    )
+  }
 
 }
-    
+

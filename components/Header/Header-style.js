@@ -4,6 +4,7 @@ export const styles = {
   box: {
     width: '100%',
     position: 'fixed',
+    zIndex: 100,
   },
   container: {
     background: variables.navy_blue,

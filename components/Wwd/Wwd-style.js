@@ -1,31 +1,89 @@
 import { variables } from '../../styles/variables';
 
 export const styles = {
-    container: {
-      background: variables.white
+  container: {
+    background: variables.white,
+    widht: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    alingContent: 'center',
+    padding: '50px 0'
+  },
+  title_container:{
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    alingContent: 'center',
+    padding: '0 15% 0',
+    fontFamily:"Roboto Light",
+    textAlign:"center",
+    lineHeight: 1,
+  },
+  title: {
+    margin: 0,
+    fontSize:"3rem",
+    color: variables.text,
+  },
+  subtitle:{
+    padding: "0 12%",
+    margin: '10px',
+    fontFamily:"Roboto Light",
+    fontSize:"1.4rem",
+    color:variables.text_gray,
+  },
+  content: {
+    width: '100%',
+  },
+  widget_container:{
+    padding: '0px 60px',
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between"
+  },
+  wwd: {
+    marginTop: 30,
+    width: '100%',
+    backgroundColor: variables.mint,
+    display: 'flex',
+    content: {
+      width: '50%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: "flex-start",
+      alignItems: 'flex-start',
+      alignContent: 'center',
+      fontFamily:"Roboto Light",
+      padding: '40px 0',
+      box: {
+        marginLeft: 30,
+      },
+      title: {
+        fontWeight: 100,
+        lineHeight: 1,
+        margin: 0,
+        color: 'white',
+        fontSize: '4rem',
+      },
+      text: {
+        margin: '15px 0 25px',
+        color: 'white',
+        width: '45%',
+      },
+      button: {
+      },
     },
-    title_container:{
-        marginLeft:"12%",
-        marginRight:"12%",
-        fontFamily:"Roboto Light",
-        textAlign:"center",
-        fontSize:"1.3em"
-    },
-    subtitle:{
-        fontFamily:"Roboto Light",
-        color:variables.text_gray,
-        marginLeft:"12%",
-        marginRight:"12%",
-
-    },
-    widget_container:{
-        marginLeft:"10%",
-        marginRight:"10%",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "flex-start"
-        
+    image: {
+      width: '50%',
+      position:'relative',
+      image: {
+        position: 'absolute',
+        top: -30,
+        width: 'calc(95%)',
+      }
     }
-
-  }
+  },
+}

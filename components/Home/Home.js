@@ -19,8 +19,8 @@ class Home extends React.Component {
           <h1 style={styles.title}>Critical Finance</h1>
           <h4 style={styles.subTitle}>Body copu here</h4>
           <div style={styles.buttoms}>
-            <Buttom label="WHAT WE DO" />
-            <Buttom label="PARTNERS" border={true} borderColor="white" color="transparent"/>
+            <Buttom >WHAT WE DO</Buttom>
+            <Buttom border={true} borderColor="white" color="transparent">PARTNERS</Buttom>
           </div>
         </div>
         <span style={styles.spacing}></span>

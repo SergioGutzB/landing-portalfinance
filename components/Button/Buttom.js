@@ -11,7 +11,7 @@ export default class Buttom extends React.Component {
   }
 
   render () {
-    const { label, color, border, borderColor, textColor} = this.props;
+    const { color, border, borderColor, textColor} = this.props;
     const labelStyle = this.props.labelStyle? this.props.labelStyle : {};
     const style = this.props.style? this.props.style : {};
 
@@ -25,9 +25,9 @@ export default class Buttom extends React.Component {
 
     return (
       <TouchableHighlight>
-        <div style={Object.assign({}, styles.container, styleButton, style)}>
-          <p style={Object.assign({}, styles.label, labelStyle) }>{label}</p>
-        </div>
+        <button style={Object.assign({}, styles.container, styleButton, style)}>
+          <p style={Object.assign({}, styles.label, labelStyle) }>{this.props.children}</p>
+        </button>
       </TouchableHighlight>
     )
   }
