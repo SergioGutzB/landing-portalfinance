@@ -15,15 +15,12 @@ export default class Buttom extends React.Component {
     const labelStyle = this.props.labelStyle? this.props.labelStyle : {};
     const style = this.props.style? this.props.style : {};
 
-
     const styleButton = {
       backgroundColor: color? color : variables.mint,
       border: "2px solid",
       borderColor: borderColor? borderColor : color? color : "transparent",
       color: textColor? textColor:  "white",
     }
-
-    console.log("styleButton: ", styleButton)
 
     return (
       <TouchableHighlight>

@@ -4,6 +4,7 @@ import { styles } from '../styles/index.js';
 import Header from '../components/Header/Header';
 import Wwd from '../components/Wwd/Wwd';
 import Home from '../components/Home/Home';
+import Team from '../components/Team/Team';
 import Radium, { StyleRoot } from 'radium';
 
 let scrollToComponent;
@@ -58,7 +59,7 @@ export default class Index extends React.Component {
             <Header/>
             <Home ref="home" />
             <Wwd/>
-            <div style={{widht: '100%', height: 400}}></div>
+            <Team />
           </div>
         </Provider>
       </StyleRoot>
