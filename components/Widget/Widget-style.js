@@ -11,15 +11,22 @@ export const styles = {
     fontSize: 14
   },
   icon_container: {
-    width: 50,
-    height: 50,
+    width: 100,
+    height: 100,
     overflow: 'hidden',
+  },
+  icon: {
+    width: '100%',
+    height: 'auto',
   },
   title:{
     textAlign: 'center',
     color: variables.ornflower_blue,
     fontFamily: 'Roboto Light',
-    fontSize: '1em',
+    fontSize: '2rem',
+    margin: 0,
+    fontWeight: 100,
+    lineHeight: 1,
   },
   text: {
     textAlign: 'center',

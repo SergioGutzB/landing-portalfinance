@@ -20,13 +20,15 @@ export default class Buttom extends React.Component {
       backgroundColor: color? color : variables.mint,
       border: "2px solid",
       borderColor: borderColor? borderColor : color? color : "transparent",
-      text: textColor? textColor:  "white",
+      color: textColor? textColor:  "white",
     }
+
+    console.log("styleButton: ", styleButton)
 
     return (
       <TouchableHighlight>
         <button style={Object.assign({}, styles.container, styleButton, style)}>
-          <p style={Object.assign({}, styles.label, labelStyle) }>{this.props.children}</p>
+          <p style={Object.assign({}, styles.label, labelStyle, {color: styleButton.color}) }>{this.props.children}</p>
         </button>
       </TouchableHighlight>
     )
