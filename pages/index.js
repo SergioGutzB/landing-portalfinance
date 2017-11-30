@@ -6,6 +6,7 @@ import Wwd from '../components/Wwd/Wwd';
 import Home from '../components/Home/Home';
 import Team from '../components/Team/Team';
 import Radium, { StyleRoot } from 'radium';
+import Footer from '../components/Footer/Footer';
 
 let scrollToComponent;
 
@@ -60,6 +61,7 @@ export default class Index extends React.Component {
             <Home ref="home" />
             <Wwd/>
             <Team />
+            <Footer />
           </div>
         </Provider>
       </StyleRoot>

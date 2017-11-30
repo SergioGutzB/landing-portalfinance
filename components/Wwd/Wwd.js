@@ -7,7 +7,7 @@ import Widget from '../Widget/Widget';
 import Buttom from '../Button/Buttom';
 import { variables } from '../../styles/variables';
 
-export default class Wwd extends React.Component {
+class Wwd extends React.Component {
 
 
   constructor(props, context) {
@@ -71,3 +71,5 @@ export default class Wwd extends React.Component {
     )
   }
 }
+
+export default Radium(Wwd)
