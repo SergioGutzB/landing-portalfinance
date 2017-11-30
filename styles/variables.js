@@ -5,6 +5,10 @@ export const variables = {
   ornflower_blue: "#4285F4",
   emerald: "#388787",
   jade: "#00BABA",
+  mint: "#000784",
+  cyan: "#00BAF3",
+  white: "#00000",
+  text_gray:"#48484A",
   mint: "#00D784",
   cyan: "#00BAF3"
 }
