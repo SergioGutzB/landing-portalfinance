@@ -1,6 +1,10 @@
 import { variables } from '../../styles/variables';
 
 export const styles = {
+  box: {
+    width: '100%',
+    position: 'fixed',
+  },
   container: {
     background: variables.navy_blue,
     display: "flex",

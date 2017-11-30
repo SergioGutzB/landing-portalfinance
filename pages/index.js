@@ -2,11 +2,11 @@ import React from 'react';
 import { Provider } from 'mobx-react';
 import { styles } from '../styles/index.js';
 import Header from '../components/Header/Header';
-<<<<<<< HEAD
 import Wwd from '../components/Wwd/Wwd';
-=======
 import Home from '../components/Home/Home';
->>>>>>> 857cfb4d7ed06a470112411d046834827c338144
+import Radium, { StyleRoot } from 'radium';
+
+let scrollToComponent;
 
 export default class Index extends React.Component {
   static async getInitialProps({req, res, query, pathname, asPath, jsonPageRes  }) {
@@ -24,22 +24,44 @@ export default class Index extends React.Component {
     super(props, context);
     this.state = {
       title: "Portal Finance",
+      transform: null,
     }
   }
 
+  componentDidMount () {
+    scrollToComponent = require('react-scroll-to-component');
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = (event) => {
+    let scrollTop = event.srcElement.body.scrollTop;
+    let itemTranslate = scrollTop;
+
+    this.setState({
+      transform: itemTranslate
+    })
+    //console.log("ref: ", this.refs.home)
+  }
+
   render () {
+    //console.log("scroll: ", this.state.transform)
     const { userAgent } = this.props;
     const { title  } = this.state
     return (
-      <Provider userAgent={userAgent}>
-        <div>
-          <Header title="Portalfinance"/>
-          <h1 style={styles.title}>{title}</h1>
-          <Wwd/>
-          <Header />
-          <Home />
-        </div>
-      </Provider>
+      <StyleRoot>
+        <Provider userAgent={userAgent}>
+          <div>
+            <Header/>
+            <Home ref="home" />
+            <Wwd/>
+            <div style={{widht: '100%', height: 400}}></div>
+          </div>
+        </Provider>
+      </StyleRoot>
     )
   }
 }

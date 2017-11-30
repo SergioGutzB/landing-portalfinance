@@ -1,8 +1,6 @@
 import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Head from 'next/head'
 import TouchableHighlight from '../../components/TouchableHighlight/TouchableHighlight';
-import global from '../../styles/global.scss';
 import { styles } from './Header-style';
 
 const logo =  '../../static/images/logo-02.png';
@@ -20,14 +18,7 @@ export default class Header extends React.Component {
 
   render () {
     return (
-      <div>
-        <Head>
-          <title>{ this.props.title }</title>
-          <meta charSet='utf-8' />
-          <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        </Head>
-        <style dangerouslySetInnerHTML={{ __html: global }} />
-
+      <div style={styles.box}>
         <div style={styles.container}>
           <div style={styles.container.left}>
             <img src={logo} style={styles.logo} />
