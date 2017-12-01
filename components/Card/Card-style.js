@@ -3,18 +3,58 @@ import { variables } from '../../styles/variables';
 export const styles = {
   card: {
     margin: '0 25px',
-    width: '28.111%',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px 0',
+    '@media (max-width: 490px)': {
+      width: '100%',
+      padding: '5px 0',
+      marginBottom: 30,
+    },
+    '@media (min-width: 491px) and (max-width: 767px)': {
+      width: '100%',
+      padding: '5px 0',
+      marginBottom: 30,
+    },
+    '@media (min-width: 768px) and (max-width: 1024px)': {
+      width: '26%',
+      padding: '8px 0',
+    },
+    '@media (min-width: 1025px) and (max-width: 1225px)': {
+      width: '28.111%',
+      padding: '13px 0',
+    },
+    '@media (min-width: 1225px) and (max-width: 1461px)': {
+      width: '28.111%',
+      padding: '15px 0',
+    },
+    '@media (min-width: 1461px)': {
+      width: '20%',
+      padding: '20px 0',
+    },
     container: {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-start',
       alignItems: 'flex-start',
       padding: '0 20px',
+    },
+  },
+  description:{
+    fontWeight: 100,
+    fontFamily: 'Roboto Light',
+    '@media (max-width: 490px)': {
+      fontSize: 14,
+    },
+    '@media (min-width: 491px) and (max-width: 767px)': {
+      fontSize: 14,
+    },
+    '@media (min-width: 768px) and (max-width: 1024px)': {
+      fontSize: 14,
+    },
+    '@media (min-width: 1025px) ': {
+      fontSize: 16,
     },
   },
   name: {
@@ -31,6 +71,12 @@ export const styles = {
     backgroundColor: "gray",
     borderRadius: '50%',
     marginBottom: 10,
+    '@media (max-width: 490px)': {
+      marginTop: 15,
+    },
+    '@media (min-width: 491px) and (max-width: 767px)': {
+      marginTop: 10,
+    },
     image: {
       width: '100%',
       maxHeight: '100%',

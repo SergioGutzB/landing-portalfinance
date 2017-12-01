@@ -10,7 +10,6 @@ class Team extends React.Component {
   }
 
   render () {
-    const user = 'https://cdn3.iconfinder.com/data/icons/faticons/32/user-01-256.png'
     return (
       <div style={styles.team}>
         <div style={styles.cards}>
@@ -18,20 +17,20 @@ class Team extends React.Component {
             first_name="Diego"
             last_name="Caicedo"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={user}
+            image='../../static/images/team/diego_caicedo.png'
           />
           <Card
-            first_name="Diego"
-            last_name="Caicedo"
+            first_name="Charles"
+            last_name="Cliff"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             contrast={true}
-            image={user}
+            image='../../static/images/team/charles-cliff.png'
           />
           <Card
-            first_name="Diego"
-            last_name="Caicedo"
+            first_name="Felipe"
+            last_name="Puntarelli"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-            image={user}
+            image='../../static/images/team/felipe_puntarelli.png'
           />
         </div>
       </div>

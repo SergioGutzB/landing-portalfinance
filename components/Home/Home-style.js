@@ -15,55 +15,81 @@ export const styles = {
   },
   center: {
     widht: '100%',
-    marginTop: 60,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    '@media (max-width: 479px)': {
+      marginTop: 100,
+    },
+    '@media (min-width: 480px) and (max-width: 767px)': {
+      marginTop: 100,
+    },
+    '@media (min-width: 768px) and (max-width: 1024px)': {
+      marginTop: 100,
+    },
+    '@media (min-width: 1025px) and (max-width: 1225px)': {
+      marginTop: 100,
+    },
+    '@media (min-width: 1225px) and (max-width: 1461px)': {
+      marginTop: 120,
+    },
+    '@media (min-width: 1462px)': {
+      marginTop: 150,
+    },
   },
   title: {
     color: "white",
     margin: 0,
-    fontSize: '120px',
     fontFamily: "Roboto Light",
     fontWeight: 100,
     '@media (max-width: 479px)': {
-      fontSize: '35px',
+      fontSize: 35,
     },
     '@media (min-width: 480px) and (max-width: 767px)': {
-      fontSize: '40px',
+      fontSize: 40,
     },
     '@media (min-width: 768px) and (max-width: 1024px)': {
-      fontSize: '60px',
+      fontSize: 60,
     },
     '@media (min-width: 1025px) and (max-width: 1225px)': {
-      fontSize: '84px',
+      fontSize: 75,
     },
     '@media (min-width: 1225px) and (max-width: 1461px)': {
-      fontSize: '94px',
+      fontSize: 85,
+    },
+    '@media (min-width: 1462px)': {
+      fontSize: 120,
     },
   },
   subTitle: {
     color: "white",
     fontFamily: "Roboto Light",
-    fontSize: 30,
-    fontWeight: 100,
     margin: 0,
-    marginTop: 15,
+    fontWeight: 100,
     '@media (max-width: 479px)': {
-      fontSize: '16px',
+      fontSize: 16,
+      marginTop: 15,
     },
     '@media (min-width: 480px) and (max-width: 767px)': {
-      fontSize: '18px',
+      fontSize: 18,
+      marginTop: 15,
     },
     '@media (min-width: 768px) and (max-width: 1024px)': {
-      fontSize: '22px',
+      fontSize: 22,
+      marginTop: 15,
     },
     '@media (min-width: 1025px) and (max-width: 1225px)': {
-      fontSize: '26px',
+      fontSize: 26,
+      marginTop: 10,
     },
     '@media (min-width: 1225px) and (max-width: 1461px)': {
-      fontSize: '28px',
+      fontSize: 28,
+      marginTop: 12,
+    },
+    '@media (min-width: 1462px)': {
+      fontSize: 30,
+      marginTop: 15,
     },
   },
   buttoms: {
@@ -134,11 +160,11 @@ export const styles = {
       },
       '@media (min-width: 1025px) and (max-width: 1224px)': {
         fontSize: 20,
-        marginBottom: 30,
+        marginBottom: 20,
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
         fontSize: 20,
-        marginBottom: 30,
+        marginBottom: 25,
       },
       '@media (min-width: 1462px)': {
         fontSize: 20,
@@ -147,14 +173,18 @@ export const styles = {
     },
     arrow: {
       width: 60,
-      marginBottom: 20,
       '@media (max-width: 479px)': {
         width: 40,
         marginBottom: 0,
       },
       '@media (max-width: 1225px)': {
-          width: 50,
-      }
+          marginBottom: 10,
+          width: 40,
+      },
+      '@media (min-width: 1462px)': {
+        fontSize: 20,
+        marginBottom: 20,
+      },
     }
   },
   spacing: {
