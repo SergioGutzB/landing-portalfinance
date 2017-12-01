@@ -1,0 +1,8 @@
+web:
+  image: 558028871948.dkr.ecr.us-east-1.amazonaws.com/portalfinance_website:production
+  ports:
+    - "32768:80"
+  cpu_shares: 100
+  mem_limit: 262144000
+  environment:
+    PRODUCTION: 'true'

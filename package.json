@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "docker:build" : "docker build -t pf-website .",
+    "docker:run": "docker run --rm -p 8080:8000 pf-website",
+    "docker:clear": "docker rmi -f $(docker images -q)"
   },
   "dependencies": {
     "autoprefixer": "6.7.6",
