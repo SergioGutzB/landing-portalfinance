@@ -109,7 +109,6 @@ export const styles = {
       color: "white",
       fontFamily: "helvetica",
       padding: "0",
-      paddingLeft: 50,
       fontSize: 14,
       whiteSpace:'nowrap',
       '@media (max-width: 479px)': {
@@ -127,6 +126,9 @@ export const styles = {
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
         paddingLeft: 45,
+      },
+      '@media (min-width: 1462px)': {
+        paddingLeft: 50,
       },
     }
   },

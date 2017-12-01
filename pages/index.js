@@ -7,6 +7,7 @@ import Home from '../components/Home/Home';
 import Team from '../components/Team/Team';
 import Radium, { StyleRoot } from 'radium';
 import Footer from '../components/Footer/Footer';
+import Partners from '../components/Partners/Partners';
 
 let scrollToComponent;
 
@@ -63,6 +64,7 @@ export default class Index extends React.Component {
             <Team />
             <Footer />
             {/*
+            <Partners />
             */}
           </div>
         </Provider>

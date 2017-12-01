@@ -17,8 +17,9 @@ class Buttom extends React.Component {
     const style = this.props.style? this.props.style : {};
 
     const styleButton = {
-      backgroundColor: color? color : variables.mint,
-      border: "2px solid",
+      background: color? color : variables.mint,
+      borderWidth: 2,
+      borderStyle: 'solid',
       borderColor: borderColor? borderColor : color? color : "transparent",
       color: textColor? textColor:  "white",
     }

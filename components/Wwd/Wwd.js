@@ -1,4 +1,3 @@
-import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Head from 'next/head'
 import global from '../../styles/global.scss';
@@ -18,6 +17,26 @@ class Wwd extends React.Component {
 
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      height: 0
+    }
+  }
+
+  componentWillMount () {
+    this.updateDimensions();
+  }
+
+  componentDidMount () {
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
+  updateDimensions = () => {
+    //const height = this.wwd.clientHeight;
+    //this.setState({ height });
   }
 
   render () {
@@ -39,43 +58,24 @@ class Wwd extends React.Component {
         <div style={styles.content}>
           <div style={styles.widget_container}>{
             array_w.map(w =>
-              <Widget style={styles.widget_container.widget} title={w.title} text={w.text} icon={w.image}/> )
+              <Widget style={styles.widget_container.widget} title={w.title} text={w.text} icon={w.image} key={w.id}/> )
             }
           </div>
         </div>
 
-        {/*
-        <div style={styles.wwd}>
+        <div style={styles.wwd} ref={wwd => this.wwd = wwd}>
           <div style={styles.wwd.content}>
             <div style={styles.wwd.content.box}>
               <h1 style={styles.wwd.content.title}>What we do</h1>
               <h1 style={styles.wwd.content.title}>at Portal Finance</h1>
               <h4 style={styles.wwd.content.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-              <Buttom style={styles.wwd.content.button} color="transparent" border={true} borderColor="white" >LEARM MORRE</Buttom>
+              <Buttom color="transparent" border={true} borderColor="white" >LEARM MORRE</Buttom>
             </div>
           </div>
           <div style={styles.wwd.image}>
             <img style={styles.wwd.image.image} src="http://www.www8-hp.com/sa/en/images/overview_hero_tcm_173_1302368.png" />
           </div>
         </div>
-
-        <div style={styles.section2}>
-          <div style={styles.section2.left}>
-            <h1 style={styles.section2.title}>The IFC -World Bank estimates SMES in developing countries face an estimated financing gap of $2.1 to $2.6 trillon. </h1>
-          </div>
-          <div style={styles.section2.right}>
-            <p style={styles.section2.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p style={styles.section2.description}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <Buttom
-              style={styles.section2.button}
-              color="transparent"
-              textColor={variables.light_blue}
-              border={true}
-              borderColor={variables.light_blue}
-            >LEARM MORRE</Buttom>
-          </div>
-        </div>
-          */}
 
       </div>
     )

@@ -95,35 +95,141 @@ export const styles = {
     backgroundColor: variables.mint,
     display: 'flex',
     content: {
-      width: '50%',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: "flex-start",
       alignItems: 'flex-start',
       alignContent: 'center',
       fontFamily:"Roboto Light",
-      padding: '40px 0',
+      '@media (max-width: 490px)': {
+        width: '100%',
+      },
+      '@media (min-width: 491px) and (max-width: 767px)': {
+        width: '100%',
+      },
+      '@media (min-width: 768px) and (max-width: 1024px)': {
+        width: '50%',
+        padding: '40px 0',
+      },
+      '@media (min-width: 1025px) and (max-width: 1225px)': {
+        width: '50%',
+        padding: '40px 0',
+      },
+      '@media (min-width: 1225px) and (max-width: 1461px)': {
+        width: '50%',
+        padding: '40px 10px',
+      },
+      '@media (min-width: 1461px)': {
+        padding: '60px 20px',
+        width: '50%',
+      },
       box: {
         marginLeft: 30,
+        '@media (max-width: 490px)': {
+          marginLeft: 0,
+          padding: '30px 20px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: "center",
+          alignItems: 'center',
+          alignContent: 'center',
+        },
+        '@media (min-width: 491px) and (max-width: 767px)': {
+          marginLeft: 0,
+          padding: '30px 20px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: "center",
+          alignItems: 'center',
+          alignContent: 'center',
+        },
+        '@media (min-width: 768px) and (max-width: 1024px)': {
+          marginLeft: 0,
+          padding: '20px 40px',
+        },
       },
       title: {
         fontWeight: 100,
-        lineHeight: 1,
+        lineHeight: .9,
         margin: 0,
         color: 'white',
-        fontSize: '4rem',
+        '@media (max-width: 490px)': {
+          fontSize: 50,
+          textAlign: 'center',
+        },
+        '@media (min-width: 491px) and (max-width: 767px)': {
+          fontSize: 50,
+          textAlign: 'center',
+        },
+        '@media (min-width: 768px) and (max-width: 1024px)': {
+          fontSize: 40,
+        },
+        '@media (min-width: 1025px) and (max-width: 1225px)': {
+          fontSize: '3.7rem',
+        },
+        '@media (min-width: 1225px) and (max-width: 1461px)': {
+          fontSize: '4.5rem',
+        },
+        '@media (min-width: 1462px) ': {
+          fontSize: '5rem',
+        },
       },
       text: {
         margin: '15px 0 25px',
         color: 'white',
         width: '45%',
+        '@media (max-width: 490px)': {
+          alignSelf: 'center',
+          width: '70%',
+          padding: '30px 0',
+          textAlign: 'center',
+        },
+        '@media (min-width: 491px) and (max-width: 767px)': {
+          alignSelf: 'center',
+          width: '70%',
+          padding: '30px 0',
+          textAlign: 'center',
+        },
+        '@media (min-width: 768px) and (max-width: 1024px)': {
+          alignSelf: 'center',
+          width: '75%',
+          padding: '0',
+          textAlign: 'left',
+        },
+        '@media (min-width: 1250px) and (max-width: 1400px)': {
+          width: '50%',
+          padding: '10px 0',
+        },
       },
       button: {
       },
     },
     image: {
-      width: '50%',
       position:'relative',
+      '@media (max-width: 490px)': {
+        display: 'none',
+      },
+      '@media (min-width: 491px) and (max-width: 767px)': {
+        display: 'none',
+      },
+      '@media (min-width: 768px) and (max-width: 1024px)': {
+        width: '60%',
+      },
+      '@media (min-width: 1025px) and (max-width: 1249px)': {
+        width: '55%',
+      },
+      '@media (min-width: 1250px) and (max-width: 1400px)': {
+        width: '45%',
+      },
+      '@media (min-width: 1401px) and (max-width: 1461px)': {
+        width: '43%',
+      },
+      '@media (min-width: 1462px) and (max-width: 1599px)': {
+        width: '42%',
+      },
+      '@media (min-width: 1600px) ': {
+        width: '38%',
+      },
       image: {
         position: 'absolute',
         top: -30,
@@ -131,39 +237,4 @@ export const styles = {
       }
     }
   },
-  section2: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    width: '100%',
-    padding: '30px 0',
-    left: {
-      padding: '50px',
-      width: '50%',
-    },
-    right: {
-      width: '50%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      alignContent: 'center',
-      width: '45%',
-      padding: '30px 50px',
-    },
-    title: {
-      fontWeight: 100,
-      lineHeight: 1,
-      margin: 0,
-      color: variables.text,
-      fontSize: '2.2rem',
-    },
-    description: {
-      textAlign: 'left',
-      color: variables.text,
-      margin: '5px 0',
-    },
-    button: {
-      marginTop: 20,
-    }
-  }
 }

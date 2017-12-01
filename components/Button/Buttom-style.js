@@ -6,25 +6,20 @@ export const styles = {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: "12px 40px",
     margin: "5px 0px",
+    paddingTop: 12,
+    paddingBottom: 12,
     '@media (max-width: 479px)': {
-      padding: "12px 20px",
+      paddingLeft: 20,
+      paddingRight: 20,
     },
     '@media (min-width: 480px) and (max-width: 767px)': {
-      padding: "12px 30px",
+      paddingLeft: 20,
+      paddingRight: 20,
     },
-    '@media (min-width: 768px) and (max-width: 1024px)': {
-      padding: "12px 40px",
-    },
-    '@media (min-width: 1025px) and (max-width: 1224px)': {
-      padding: "12px 40px",
-    },
-    '@media (min-width: 1225px) and (max-width: 1461px)': {
-      padding: "12px 40px",
-    },
-    '@media (min-width: 1462px)': {
-      padding: "12px 40px",
+    '@media (min-width: 768px)': {
+      paddingLeft: 20,
+      paddingRight: 20,
     },
    },
    label: {
@@ -33,7 +28,6 @@ export const styles = {
     fontSize: '1em',
     fontFamily: "Roboto Bold",
     whiteSpace: 'nowrap',
-
    },
 }
 
