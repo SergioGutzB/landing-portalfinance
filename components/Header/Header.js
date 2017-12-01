@@ -2,6 +2,7 @@ import React from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import TouchableHighlight from '../../components/TouchableHighlight/TouchableHighlight';
 import { styles } from './Header-style';
+import Radium from 'radium';
 
 const logo =  '../../static/images/logo-02.png';
 
@@ -10,7 +11,7 @@ if (!process.tapEventInjected) {
   process.tapEventInjected = true
 }
 
-export default class Header extends React.Component {
+class Header extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -51,3 +52,4 @@ export default class Header extends React.Component {
     )
   }
 }
+export default Radium(Header);

@@ -59,9 +59,11 @@ export default class Index extends React.Component {
           <div>
             <Header/>
             <Home ref="home" />
+            {/*
             <Wwd/>
             <Team />
             <Footer />
+            */}
           </div>
         </Provider>
       </StyleRoot>

@@ -3,8 +3,9 @@ import Head from 'next/head'
 import { styles } from './Buttom-style.js';
 import { variables } from '../../styles/variables';
 import TouchableHighlight from '../TouchableHighlight/TouchableHighlight';
+import Radium from 'radium';
 
-export default class Buttom extends React.Component {
+class Buttom extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -31,3 +32,5 @@ export default class Buttom extends React.Component {
     )
   }
 }
+
+export default Radium(Buttom);

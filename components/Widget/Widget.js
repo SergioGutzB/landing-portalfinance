@@ -12,7 +12,7 @@ export default class Widget extends React.Component {
     return (
       <div style={styles.container} >
         <div style={styles.icon_container}>
-          <img src="https://www.stickyminds.com/sites/default/files/article/2017/api-testing.png" style={styles.icon} />
+          <img src={icon} style={styles.icon} />
         </div>
         <h2 style={styles.title}>{title}</h2>
         <p style={styles.text}>{text}</p>

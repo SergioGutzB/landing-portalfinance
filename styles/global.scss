@@ -47,4 +47,19 @@ body {
   font-family: 'Roboto Light';
   font-size: 14px;
 }
+$mobile-portrait: 479px;
+$mobile-landscape: 599px;
+$small-tablet-portrait: 799px;
+$small-tablet-landscape: 767px;
+$tablet-portrait: 1023px;
+$tablet-landscape: 1024px;
+$medium: 1224px; 
+
+@media (min-width: 1024px) {
+  font-size: 22px;
+}
+
+@media (min-width: 1225px) {
+  font-size: 24px;
+}
 

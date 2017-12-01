@@ -3,9 +3,15 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Head from 'next/head'
 import global from '../../styles/global.scss';
 import {styles} from './Wwd-style';
+import Radium from 'radium';
 import Widget from '../Widget/Widget';
 import Buttom from '../Button/Buttom';
 import { variables } from '../../styles/variables';
+
+const setting = '../../static/images/search.png';
+const safeMoney = '../../static/images/setting.png';
+const customer = '../../static/images/customer.png';
+const search = '../../static/images/search.png';
 
 class Wwd extends React.Component {
 
@@ -15,10 +21,10 @@ class Wwd extends React.Component {
   }
 
   render () {
-    const array_w = [{ "id":"1","title":"Process Automation","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
-      ,{ "id":"2","title":"Risk Management", "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
-      ,{ "id":"3","title":"Customer Acquisition","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
-      ,{ "id":"4","title":"Accountability & Traceability","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
+    const array_w = [{ "id":"1","image": setting, "title":"Process Automation","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
+      ,{ "id":"2","image": safeMoney, "title":"Risk Management", "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
+      ,{ "id":"3","image": customer, "title":"Customer Acquisition","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
+      ,{ "id":"4","image": search, "title":"Accountability & Traceability","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
     ];
 
     return (
@@ -31,7 +37,7 @@ class Wwd extends React.Component {
         <div style={styles.content}>
           <div style={styles.widget_container}>{
             array_w.map(w =>
-              <Widget title={w.title} text={w.text} /> )
+              <Widget title={w.title} text={w.text} icon={w.image}/> )
             }
           </div>
         </div>
@@ -72,4 +78,4 @@ class Wwd extends React.Component {
   }
 }
 
-export default Radium(Wwd)
+export default Radium(Wwd);
