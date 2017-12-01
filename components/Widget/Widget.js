@@ -3,8 +3,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Head from 'next/head'
 import global from '../../styles/global.scss';
 import { styles } from './Widget-style';
+import Radium from 'radium';
 
-export default class Widget extends React.Component {
+class Widget extends React.Component {
 
   render(){
     const {icon, title, text} = this.props;
@@ -22,3 +23,4 @@ export default class Widget extends React.Component {
 
 }
 
+export default Radium(Widget);

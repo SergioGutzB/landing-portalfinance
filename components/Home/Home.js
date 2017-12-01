@@ -20,11 +20,11 @@ class Home extends React.Component {
         <div style={styles.center}>
           <h1 style={styles.title}>Transforming Mission</h1>
           <h1 style={styles.title}>Critical Finance</h1>
-          <h4 style={styles.subTitle}>Body copu here</h4>
+          <h4 style={styles.subTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
           <div style={styles.buttoms}>
             <Buttom style={styles.buttoms.buttom}>WHAT WE DO</Buttom>
             <div style={styles.buttoms.space}/>
-            <Buttom style={styles.buttoms.buttom} border={true} borderColor="white" color="transparent">PARTNERS</Buttom>
+            <Buttom style={styles.buttoms.buttom} border={true} borderColor="white" color="transparent">OUR PARTNERS</Buttom>
           </div>
         </div>
         <span style={styles.spacing}></span>

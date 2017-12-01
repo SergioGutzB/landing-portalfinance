@@ -57,10 +57,10 @@ export default class Index extends React.Component {
       <StyleRoot>
         <Provider userAgent={userAgent}>
           <div>
+            <Wwd/>
+            {/*
             <Header/>
             <Home ref="home" />
-            {/*
-            <Wwd/>
             <Team />
             <Footer />
             */}

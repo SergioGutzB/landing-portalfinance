@@ -27,21 +27,24 @@ class Wwd extends React.Component {
       ,{ "id":"4","image": search, "title":"Accountability & Traceability","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"}
     ];
 
+    const style = this.props.style? this.props.style : {}
+
     return (
-      <div style={styles.container}>
+      <div style={Object.assign({}, styles.container, style)}>
         <div style={styles.title_container}>
-          <h1 style={styles.title}>Electronic Invoicing generates a plethora of information, but making sence of this information is a challenge.</h1>
+          <h1 style={styles.title}>Electronic Invoicing generates a plethora of information, but making sense of this information is a challenge.</h1>
           <h3 style={styles.subtitle}>At Portal Finance, we provide the tools to understand and use this information to support key financing decisions.</h3>
         </div>
 
         <div style={styles.content}>
           <div style={styles.widget_container}>{
             array_w.map(w =>
-              <Widget title={w.title} text={w.text} icon={w.image}/> )
+              <Widget style={styles.widget_container.widget} title={w.title} text={w.text} icon={w.image}/> )
             }
           </div>
         </div>
 
+        {/*
         <div style={styles.wwd}>
           <div style={styles.wwd.content}>
             <div style={styles.wwd.content.box}>
@@ -72,6 +75,7 @@ class Wwd extends React.Component {
             >LEARM MORRE</Buttom>
           </div>
         </div>
+          */}
 
       </div>
     )
