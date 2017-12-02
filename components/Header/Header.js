@@ -30,19 +30,19 @@ class Header extends React.Component {
           <div style={styles.container.right}>
             <ul style={styles.menu}>
               <TouchableHighlight>
-                <li style={styles.menu.item}>HOME</li>
+                <li style={styles.menu.item} onClick={() => this.props.actions.gotoHome()}>HOME</li>
               </TouchableHighlight>
               <TouchableHighlight>
-                <li style={styles.menu.item}>WHAT WE DO</li>
+                <li style={styles.menu.item} onClick={() => this.props.actions.gotoWwd()}>WHAT WE DO</li>
               </TouchableHighlight>
               <TouchableHighlight>
-                <li style={styles.menu.item}>PARTNERS</li>
+                <li style={styles.menu.item} onClick={() => this.props.actions.gotoPartners()}>PARTNERS</li>
               </TouchableHighlight>
               <TouchableHighlight>
-                <li style={styles.menu.item}>TEAM</li>
+                <li style={styles.menu.item} onClick={() => this.props.actions.gotoTeam()}>TEAM</li>
               </TouchableHighlight>
               <TouchableHighlight>
-                <li style={styles.menu.item}>CONTACT</li>
+                <li style={styles.menu.item} >CONTACT</li>
               </TouchableHighlight>
             </ul>
           </div>

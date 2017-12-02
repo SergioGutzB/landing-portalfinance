@@ -50,21 +50,31 @@ export default class Index extends React.Component {
     //console.log("ref: ", this.refs.home)
   }
 
+  gotoTo = (evt, ref) => {
+    console.log("goto Team")
+    scrollToComponent(ref, {align: 'top', duration: 500, ease:'inCirc'});
+  }
+
   render () {
-    //console.log("scroll: ", this.state.transform)
     const { userAgent } = this.props;
     const { title  } = this.state
+    const actions = {
+      gotoTeam: (e) => this.gotoTo(e, this.refs.team_ref),
+      gotoHome: (e) => this.gotoTo(e, this.refs.home_ref),
+      gotoWwd: (e) => this.gotoTo(e, this.refs.wwd_ref),
+      gotoPartners: (e) => this.gotoTo(e, this.refs.partners_ref),
+    }
     return (
       <StyleRoot>
         <Provider userAgent={userAgent}>
           <div>
-            <Header/>
-            <Home ref="home" />
-            <Wwd/>
-            <Team />
+            <Header ref="team_home" actions={actions} />
+            <Home ref="home_ref"/>
+            <Wwd ref="wwd_ref"/>
+            <Partners ref="partners_ref"/>
+            <Team ref="team_ref"/>
             <Footer />
             {/*
-            <Partners />
             */}
           </div>
         </Provider>
