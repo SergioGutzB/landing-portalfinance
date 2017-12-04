@@ -48,7 +48,8 @@ export const styles = {
         fontSize: 70,
       },
       '@media (min-width: 1462px) ': {
-        fontSize: 94,
+        width: '54%',
+        fontSize: 70,
       },
     },
     text: {

@@ -72,7 +72,7 @@ export const styles = {
         fontSize: 45,
       },
       '@media (min-width: 1462px) ': {
-        fontSize: 65,
+        fontSize: 70,
       },
     },
     subtitle: {

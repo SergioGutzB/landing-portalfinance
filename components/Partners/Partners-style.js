@@ -7,24 +7,6 @@ const text = {
   marginBottom: 0,
   fontWeight: 500,
   textAlign: 'left',
-  '@media (max-width: 490px)': {
-    width: '90%',
-  },
-  '@media (min-width: 491px) and (max-width: 767px)': {
-    width: '90%',
-  },
-  '@media (min-width: 768px) and (max-width: 1024px)': {
-    width: '90%',
-  },
-  '@media (min-width: 1025px) and (max-width: 1225px)': {
-    width: '90%',
-  },
-  '@media (min-width: 1225px) and (max-width: 1461px)': {
-    width: '80%',
-  },
-  '@media (min-width: 1462px) ': {
-    width: '75%',
-  },
 }
 
 export const styles = {
@@ -48,22 +30,22 @@ export const styles = {
     left: {
       paddingTop: 50,
       paddingBottom: 50,
-      paddingLeft: 220,
-      paddingRight: 50,
       width: '50%',
       '@media (max-width: 490px)': {
+        paddingTop: 20,
+        paddingBottom: 20,
+        width: '100%',
       },
       '@media (min-width: 491px) and (max-width: 767px)': {
       },
       '@media (min-width: 768px) and (max-width: 1024px)': {
       },
       '@media (min-width: 1025px) and (max-width: 1225px)': {
+        width: '50%',
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
-        paddingLeft: 130,
       },
       '@media (min-width: 1462px) ': {
-        paddingLeft: 220,
       },
     },
     right: {
@@ -75,22 +57,76 @@ export const styles = {
       width: '45%',
       paddingTop: 30,
       paddingBottom: 30,
-      paddingLeft: 50,
-      paddingRight: 50,
+      '@media (max-width: 490px)': {
+        alignItems: 'center',
+        paddingTop: 20,
+        paddingBottom: 20,
+        width: '100%',
+      },
+      '@media (min-width: 491px) and (max-width: 767px)': {
+      },
+      '@media (min-width: 768px) and (max-width: 1024px)': {
+      },
+      '@media (min-width: 1025px) and (max-width: 1225px)': {
+        width: '50%',
+      },
+      '@media (min-width: 1225px) and (max-width: 1461px)': {
+        paddingLeft: 130,
+      },
+      '@media (min-width: 1462px) ': {
+        paddingLeft: 220,
+      },
     },
     title: {
       ...text,
       fontWeight: 100,
       lineHeight: 1,
-      fontSize: '2.2rem',
+      '@media (max-width: 490px)': {
+        fontSize: 30,
+        textAlign: 'center',
+        paddingLeft: 30,
+        paddingRight: 30,
+      },
+      '@media (min-width: 491px) and (max-width: 767px)': {
+        fontSize: 30,
+        textAlign: 'center',
+        paddingLeft: 30,
+        paddingRight: 30,
+      },
+      '@media (min-width: 768px) and (max-width: 1024px)': {
+      },
+      '@media (min-width: 1025px) and (max-width: 1225px)': {
+      },
+      '@media (min-width: 1225px) and (max-width: 1461px)': {
+        fontSize: '2.2rem',
+      },
+      '@media (min-width: 1462px) ': {
+        fontSize: '2.2rem',
+      },
     },
     description: {
       ...text,
       textAlign: 'left',
       fontSize: '1rem',
+      '@media (max-width: 490px)': {
+        textAlign: 'center',
+        width: '70%',
+      },
+      '@media (min-width: 491px) and (max-width: 767px)': {
+      },
+      '@media (min-width: 768px) and (max-width: 1024px)': {
+      },
+      '@media (min-width: 1025px) and (max-width: 1225px)': {
+      },
+      '@media (min-width: 1225px) and (max-width: 1461px)': {
+        fontSize: '2.2rem',
+      },
+      '@media (min-width: 1462px) ': {
+        fontSize: '2.2rem',
+      },
     },
-    button: {
-      marginTop: 20,
+    buttom: {
+      marginTop: 35,
     }
   }
 }
