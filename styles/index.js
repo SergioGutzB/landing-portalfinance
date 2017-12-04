@@ -3,5 +3,5 @@ export const styles = {
     color: "red",
     textAlign: "center",
     fontFamily: "Roboto Bold"
-  }
+  },
 }
