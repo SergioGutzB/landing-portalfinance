@@ -6,7 +6,10 @@ export const styles = {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: "5px 0px",
+    marginTop: 5,
+    marginBottom: 5,
+    marginLeft: 0,
+    marginRight: 0,
     paddingTop: 12,
     paddingBottom: 12,
     '@media (max-width: 479px)': {

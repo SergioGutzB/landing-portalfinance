@@ -14,6 +14,8 @@ class Home extends React.Component {
   }
 
   render () {
+    const { actions } = this.props;
+
     return (
       <div style={styles.background}>
         <span style={styles.spacing}></span>
@@ -31,7 +33,7 @@ class Home extends React.Component {
         <div style={styles.footer} >
           <p style={styles.footer.text}>Scroll down to see how Portal Finance makes  a difference</p>
           <TouchableHighlight>
-            <img src={arrow} style={styles.footer.arrow}/>
+            <img src={arrow} style={styles.footer.arrow} onClick={() => actions.gotoMakes()}/>
           </TouchableHighlight>
         </div>
       </div>

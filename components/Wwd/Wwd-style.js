@@ -9,7 +9,7 @@ export const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     alingContent: 'center',
-    padding: '50px 0'
+    padding: '15px 0 70px'
   },
   title_container:{
     display: 'flex',
@@ -90,10 +90,11 @@ export const styles = {
     }
   },
   wwd: {
-    marginTop: 30,
+    marginTop: 50,
     width: '100%',
     backgroundColor: variables.mint,
     display: 'flex',
+    position:'relative',
     content: {
       display: 'flex',
       flexDirection: 'column',
@@ -205,7 +206,9 @@ export const styles = {
       },
     },
     image: {
-      position:'relative',
+      position: 'absolute',
+      top: '-8%',
+      right: '8%',
       '@media (max-width: 490px)': {
         display: 'none',
       },
@@ -213,28 +216,14 @@ export const styles = {
         display: 'none',
       },
       '@media (min-width: 768px) and (max-width: 1024px)': {
-        width: '60%',
+        right: '3%',
       },
       '@media (min-width: 1025px) and (max-width: 1249px)': {
-        width: '55%',
+        right: '3.5%',
       },
-      '@media (min-width: 1250px) and (max-width: 1400px)': {
-        width: '45%',
+      '@media (min-width: 1250px) and (max-width: 1300px)': {
+        right: '4%',
       },
-      '@media (min-width: 1401px) and (max-width: 1461px)': {
-        width: '43%',
-      },
-      '@media (min-width: 1462px) and (max-width: 1599px)': {
-        width: '42%',
-      },
-      '@media (min-width: 1600px) ': {
-        width: '38%',
-      },
-      image: {
-        position: 'absolute',
-        top: -30,
-        width: 'calc(95%)',
-      }
     }
   },
 }

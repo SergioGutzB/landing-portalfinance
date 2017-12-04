@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import { styles } from '../styles/index.js';
 import Header from '../components/Header/Header';
@@ -8,6 +9,8 @@ import Team from '../components/Team/Team';
 import Radium, { StyleRoot } from 'radium';
 import Footer from '../components/Footer/Footer';
 import Partners from '../components/Partners/Partners';
+import Makes from '../components/Makes/Makes';
+import InfoWwd from '../components/InfoWwd/InfoWwd';
 
 let scrollToComponent;
 
@@ -28,6 +31,7 @@ export default class Index extends React.Component {
     this.state = {
       title: "Portal Finance",
       transform: null,
+      offsetScroll: 0,
     }
   }
 
@@ -40,41 +44,47 @@ export default class Index extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll = (event) => {
-    let scrollTop = event.srcElement.body.scrollTop;
-    let itemTranslate = scrollTop;
-
-    this.setState({
-      transform: itemTranslate
-    })
-    //console.log("ref: ", this.refs.home)
+  getOffset = (element) => {
+    let bounding = element.getBoundingClientRect();
+    return {
+      top: bounding.top + document.body.scrollTop,
+      left: bounding.left + document.body.scrollLeft
+    };
   }
 
-  gotoTo = (evt, ref) => {
-    console.log("goto Team")
-    scrollToComponent(ref, {align: 'top', duration: 500, ease:'inCirc'});
+  handleScroll = () => {
+    let startElement = ReactDOM.findDOMNode(this.refs.home_ref);
+    let offset = this.getOffset(startElement)
+    this.setState({offsetScroll:offset.top})
+  }
+
+  gotoTo = (evt, ref, offset) => {
+    scrollToComponent(ref, {duration: 500, ease:'inCirc', offset: offset});
   }
 
   render () {
     const { userAgent } = this.props;
     const { title  } = this.state
     const actions = {
-      gotoTeam: (e) => this.gotoTo(e, this.refs.team_ref),
-      gotoHome: (e) => this.gotoTo(e, this.refs.home_ref),
-      gotoWwd: (e) => this.gotoTo(e, this.refs.wwd_ref),
-      gotoPartners: (e) => this.gotoTo(e, this.refs.partners_ref),
+      gotoHome: (e) => this.gotoTo(e, this.refs.home_ref, 0),
+      gotoMakes: (e) => this.gotoTo(e, this.refs.makes_ref, -55),
+      gotoWwd: (e) => this.gotoTo(e, this.refs.wwd_ref, -30),
+      gotoPartners: (e) => this.gotoTo(e, this.refs.partners_ref, 30),
+      gotoTeam: (e) => this.gotoTo(e, this.refs.team_ref, -10),
     }
     return (
       <StyleRoot>
         <Provider userAgent={userAgent}>
           <div>
-            <Header ref="team_home" actions={actions} />
-            <Home ref="home_ref"/>
+            <Header ref="header_ref" actions={actions} offset={this.state.offsetScroll}/>
+            <Home ref="home_ref" actions={actions}/>
+            <Makes ref="makes_ref" />
             <Wwd ref="wwd_ref"/>
             <Partners ref="partners_ref"/>
             <Team ref="team_ref"/>
             <Footer />
             {/*
+            <InfoWwd ref="infoWwd_ref" />
             */}
           </div>
         </Provider>

@@ -25,6 +25,7 @@ export const styles = {
     paddingTop: padding,
     paddingBottom: padding,
     paddingLeft: padding,
+    paddingRight: padding,
     left: {
       '@media (max-width: 479px)': {
         display: 'none',
@@ -35,61 +36,61 @@ export const styles = {
         width: '100%',
       },
     },
-    '@media (max-width: 479px)': {
-      paddingTop: 5,
-      paddingBottom: 5,
-      paddingLeft: 5,
-      paddingRight: 5
-    },
-    paddingRight: padding,
-    '@media (min-width: 480px) and (max-width: 767px)': {
-      height: heightLogo -20,
-      paddingTop: padding -20,
-      paddingBottom: padding -20,
-      paddingLeft: padding -20,
-      paddingRight: padding -20,
-    },
-    '@media (min-width: 768px) and (max-width: 1024px)': {
-      height: heightLogo -20,
-      paddingTop: padding -20,
-      paddingBottom: padding -20,
-      paddingLeft: padding -20,
-      paddingRight: padding -20,
-    },
-    '@media (min-width: 1025px) and (max-width: 1225px)': {
-      height: heightLogo -15,
-      paddingTop: padding -15,
-      paddingBottom: padding -15,
-      paddingLeft: padding -15,
-      paddingRight: padding -15,
-    },
-    '@media (min-width: 1225px) and (max-width: 1461px)': {
-      height: heightLogo -10,
-      paddingTop: padding -10,
-      paddingBottom: padding -10,
-      paddingLeft: padding -10,
-      paddingRight: padding -10,
-    },
+    //'@media (max-width: 479px)': {
+      //paddingTop: 5,
+      //paddingBottom: 5,
+      //paddingLeft: 5,
+      //paddingRight: 5
+    //},
+    //paddingRight: padding,
+    //'@media (min-width: 480px) and (max-width: 767px)': {
+      //height: heightLogo -20,
+      //paddingTop: padding -20,
+      //paddingBottom: padding -20,
+      //paddingLeft: padding -20,
+      //paddingRight: padding -20,
+    //},
+    //'@media (min-width: 768px) and (max-width: 1024px)': {
+      //height: heightLogo -20,
+      //paddingTop: padding -20,
+      //paddingBottom: padding -20,
+      //paddingLeft: padding -20,
+      //paddingRight: padding -20,
+    //},
+    //'@media (min-width: 1025px) and (max-width: 1225px)': {
+      //height: heightLogo -15,
+      //paddingTop: padding -15,
+      //paddingBottom: padding -15,
+      //paddingLeft: padding -15,
+      //paddingRight: padding -15,
+    //},
+    //'@media (min-width: 1225px) and (max-width: 1461px)': {
+      //height: heightLogo -10,
+      //paddingTop: padding -10,
+      //paddingBottom: padding -10,
+      //paddingLeft: padding -10,
+      //paddingRight: padding -10,
+    //},
   },
   logo: {
     height:  heightLogo,
     widht: "auto",
-    '@media (max-width: 479px)': {
-      height:  heightLogo - 20,
-      display: 'none',
-    },
-    '@media (min-width: 480px) and (max-width: 767px)': {
-      height:  heightLogo - 20,
-    },
-    '@media (min-width: 768px) and (max-width: 1024px)': {
-      height:  heightLogo - 20,
-    },
-    '@media (min-width: 1025px) and (max-width: 1225px)': {
-      height:  heightLogo - 15,
-    },
-    '@media (min-width: 1225px) and (max-width: 1461px)': {
-      height:  heightLogo - 10,
-    },
+    //'@media (max-width: 479px)': {
+      //height:  heightLogo - 20,
+      //display: 'none',
+    //},
+    //'@media (min-width: 480px) and (max-width: 767px)': {
+      //height:  heightLogo - 20,
+    //},
+    //'@media (min-width: 768px) and (max-width: 1024px)': {
+      //height:  heightLogo - 20,
+    //},
+    //'@media (min-width: 1025px) and (max-width: 1225px)': {
+      //height:  heightLogo - 15,
+    //},
+    //'@media (min-width: 1225px) and (max-width: 1461px)': {
+      //height:  heightLogo - 10,
+    //},
   },
   menu: {
     display: "flex",

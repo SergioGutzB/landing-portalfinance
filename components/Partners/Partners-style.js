@@ -9,16 +9,19 @@ export const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     alingContent: 'center',
-    padding: '50px 0'
+    paddingTop: 10,
+    paddingBottom: 50,
   },
   partners: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
-    padding: '30px 0',
     left: {
-      padding: '50px',
+      paddingTop: 50,
+      paddingBottom: 50,
+      paddingLeft: 50,
+      paddingRight: 50,
       width: '50%',
     },
     right: {
@@ -28,7 +31,10 @@ export const styles = {
       alignItems: 'flex-start',
       alignContent: 'center',
       width: '45%',
-      padding: '30px 50px',
+      paddingTop: 30,
+      paddingBottom: 30,
+      paddingLeft: 50,
+      paddingRight: 50,
     },
     title: {
       fontWeight: 100,
@@ -40,7 +46,8 @@ export const styles = {
     description: {
       textAlign: 'left',
       color: variables.text,
-      margin: '5px 0',
+      marginTop: 5,
+      marginBottom: 5,
     },
     button: {
       marginTop: 20,
