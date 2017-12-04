@@ -15,7 +15,7 @@ export const styles = {
       width: '39.2%',
     },
     '@media (min-width: 768px) and (max-width: 1024px)': {
-      width: '22.7%',
+      width: '42%',
     },
     '@media (min-width: 1025px) and (max-width: 1225px)': {
       width: '20.5%',
@@ -24,7 +24,9 @@ export const styles = {
       width: '21.2%',
     },
     '@media (min-width: 1461px)': {
-      width: '22.7%',
+      width: '18%',
+      paddingLeft: 22,
+      paddingRight: 22,
     },
   },
   icon_container: {

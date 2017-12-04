@@ -49,11 +49,11 @@ class Header extends React.Component {
   }
 
   render () {
-    const { offset, height } = this.state;
+    const { offset, height, width } = this.state;
     let offsetScroll = offset? ((Math.abs(offset) < (height/1.5)) ? 0 : 1) : 0  ;
     let padding = !!offsetScroll? 0 : 45;
     let logoHeight = !!offsetScroll? 55 : 95;
-    let logoWidth = !!offsetScroll? 137 : 237;
+    let logoWidth = !!offsetScroll? 137 : (width >= 768 && width < 1024 )? 150 : 237;
 
     const style = {
       opacity: spring(offsetScroll),

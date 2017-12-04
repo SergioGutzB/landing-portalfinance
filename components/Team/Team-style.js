@@ -7,7 +7,7 @@ export const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
-    padding: '30px 0',
+    padding: '30px 0 100px',
   },
   cards: {
     display: 'flex',

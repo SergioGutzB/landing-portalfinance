@@ -126,7 +126,6 @@ export const styles = {
         width: '50%',
       },
       box: {
-        marginLeft: 30,
         '@media (max-width: 490px)': {
           marginLeft: 0,
           padding: '30px 20px',
@@ -148,6 +147,15 @@ export const styles = {
         '@media (min-width: 768px) and (max-width: 1024px)': {
           marginLeft: 0,
           padding: '20px 40px',
+        },
+        '@media (min-width: 1025px) and (max-width: 1225px)': {
+          marginLeft: '21%'
+        },
+        '@media (min-width: 1225px) and (max-width: 1461px)': {
+          marginLeft: '13.5%'
+        },
+        '@media (min-width: 1462px) ': {
+          marginLeft: '21%'
         },
       },
       title: {
@@ -173,7 +181,8 @@ export const styles = {
           fontSize: '4.5rem',
         },
         '@media (min-width: 1462px) ': {
-          fontSize: '5rem',
+          width: '70%',
+          fontSize: 70,
         },
       },
       text: {
@@ -218,13 +227,16 @@ export const styles = {
         display: 'none',
       },
       '@media (min-width: 768px) and (max-width: 1024px)': {
-        right: '3%',
+        right: '1.5%',
       },
       '@media (min-width: 1025px) and (max-width: 1249px)': {
-        right: '3.5%',
+        right: '3.2%',
       },
-      '@media (min-width: 1250px) and (max-width: 1300px)': {
-        right: '4%',
+      '@media (min-width: 1250px) and (max-width: 1461px)': {
+        right: '3.2%',
+      },
+      '@media (min-width: 1462px) ': {
+        right: '8.5%',
       },
     }
   },

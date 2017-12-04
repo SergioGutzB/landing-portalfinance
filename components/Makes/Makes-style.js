@@ -9,7 +9,7 @@ export const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     alingContent: 'center',
-    padding: '50px 0 15px'
+    padding: '100px 0 15px'
   },
   title_container:{
     display: 'flex',
@@ -76,6 +76,9 @@ export const styles = {
   },
   content: {
     width: '100%',
+    '@media (min-width: 1461px)': {
+      width: '88%',
+    },
   },
   widget_container:{
     padding: '0px 60px',
@@ -84,6 +87,7 @@ export const styles = {
     alignItems: "center",
     justifyContent: "space-between",
     flexWrap: 'wrap',
+    marginTop: 40,
     widget: {
       width: '28%',
       background: 'red',

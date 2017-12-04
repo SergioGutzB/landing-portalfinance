@@ -43,6 +43,7 @@ export const styles = {
     margin: 0,
     fontFamily: "Roboto Light",
     fontWeight: 100,
+    textAlign: 'center',
     '@media (max-width: 479px)': {
       fontSize: 35,
     },
@@ -66,6 +67,7 @@ export const styles = {
     color: "white",
     fontFamily: "Roboto Light",
     margin: 0,
+    textAlign: 'center',
     fontWeight: 100,
     '@media (max-width: 479px)': {
       fontSize: 16,
@@ -100,10 +102,10 @@ export const styles = {
     alignItems: 'center',
     buttom: {
       '@media (max-width: 479px)': {
-        width: 120,
+        width: 140,
       },
       '@media (min-width: 480px) and (max-width: 767px)': {
-        width: 120,
+        width: 150,
       },
       '@media (min-width: 768px) and (max-width: 1024px)': {
         width: 160,

@@ -28,6 +28,11 @@ export const styles = {
     width: '100%',
     flexWrap: 'wrap',
     left: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignContent: 'center',
       paddingTop: 50,
       paddingBottom: 50,
       width: '50%',
@@ -44,8 +49,10 @@ export const styles = {
         width: '50%',
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
+        width: '50%',
       },
       '@media (min-width: 1462px) ': {
+        width: '50%',
       },
     },
     right: {
@@ -71,10 +78,10 @@ export const styles = {
         width: '50%',
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
-        paddingLeft: 130,
+        width: '50%',
       },
       '@media (min-width: 1462px) ': {
-        paddingLeft: 220,
+        width: '50%',
       },
     },
     title: {
@@ -94,13 +101,19 @@ export const styles = {
         paddingRight: 30,
       },
       '@media (min-width: 768px) and (max-width: 1024px)': {
+        width: '70%',
+        fontSize: '1.8rem',
       },
       '@media (min-width: 1025px) and (max-width: 1225px)': {
+        width: '70%',
+        fontSize: '2rem',
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
+        width: '70%',
         fontSize: '2.2rem',
       },
       '@media (min-width: 1462px) ': {
+        width: '54%',
         fontSize: '2.2rem',
       },
     },
@@ -112,17 +125,17 @@ export const styles = {
         textAlign: 'center',
         width: '70%',
       },
-      '@media (min-width: 491px) and (max-width: 767px)': {
-      },
-      '@media (min-width: 768px) and (max-width: 1024px)': {
-      },
       '@media (min-width: 1025px) and (max-width: 1225px)': {
+        textAlign: 'left',
+        width: '84%',
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
-        fontSize: '2.2rem',
+        textAlign: 'left',
+        width: '84%',
       },
       '@media (min-width: 1462px) ': {
-        fontSize: '2.2rem',
+        textAlign: 'left',
+        width: '76%',
       },
     },
     buttom: {
