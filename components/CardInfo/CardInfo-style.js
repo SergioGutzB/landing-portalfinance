@@ -22,7 +22,6 @@ const text = {
   marginBottom: 0,
   fontWeight: 500,
   textAlign: 'left',
-  lineHeight: 1,
 }
 
 export const styles = {
@@ -49,11 +48,12 @@ export const styles = {
   title: {
     ...text,
     fontSize: 70,
+    lineHeight: 1,
   },
   text: {
     ...text,
     fontSize: '1rem',
-    marginTop: 20,
+    lineHeight: 1.3,
   }
 }
 

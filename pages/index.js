@@ -11,6 +11,8 @@ import Footer from '../components/Footer/Footer';
 import Partners from '../components/Partners/Partners';
 import Makes from '../components/Makes/Makes';
 import InfoWwd from '../components/InfoWwd/InfoWwd';
+import InfoPartners from '../components/InfoPartners/InfoPartners';
+
 
 let scrollToComponent;
 
@@ -59,7 +61,7 @@ export default class Index extends React.Component {
   }
 
   gotoTo = (evt, ref, offset) => {
-    scrollToComponent(ref, {duration: 500, ease:'inCirc', offset: offset});
+    scrollToComponent(ref, {duration: 500, ease:'inCirc', offset: offset, align: 'top'});
   }
 
   render () {
@@ -71,6 +73,8 @@ export default class Index extends React.Component {
       gotoWwd: (e) => this.gotoTo(e, this.refs.wwd_ref, -30),
       gotoPartners: (e) => this.gotoTo(e, this.refs.partners_ref, 30),
       gotoTeam: (e) => this.gotoTo(e, this.refs.team_ref, -10),
+      gotoInfoPartners: (e) => this.gotoTo(e, this.refs.infoPartners_ref, -260),
+      gotoInfoWwd: (e) => this.gotoTo(e, this.refs.infoWwd_ref, -450),
     }
     return (
       <StyleRoot>
@@ -79,9 +83,10 @@ export default class Index extends React.Component {
             <Header ref="header_ref" actions={actions} offset={this.state.offsetScroll}/>
             <Home ref="home_ref" actions={actions}/>
             <Makes ref="makes_ref" />
-            <Wwd ref="wwd_ref"/>
+            <Wwd ref="wwd_ref" actions={actions}/>
             <InfoWwd ref="infoWwd_ref" />
-            <Partners ref="partners_ref"/>
+            <Partners ref="partners_ref" actions={actions}/>
+            <InfoPartners ref="infoPartners_ref" />
             <Team ref="team_ref"/>
             <Footer />
             {/*

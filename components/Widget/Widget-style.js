@@ -52,7 +52,8 @@ export const styles = {
     textAlign: 'center',
     color: variables.text_gray,
     fontFamily: 'Roboto Light',
-    fontSize: '1em',
+    fontSize: '1rem',
+    lineHeight: 1.3,
   }
 
 }

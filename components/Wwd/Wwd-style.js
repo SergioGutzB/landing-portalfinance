@@ -52,6 +52,7 @@ export const styles = {
     margin: '10px',
     fontFamily:"Roboto Light",
     color:variables.text_gray,
+    lineHeight: 1.3,
     '@media (max-width: 479px)': {
       fontSize:".9rem",
       padding: "0 0%",
@@ -179,6 +180,7 @@ export const styles = {
         margin: '15px 0 25px',
         color: 'white',
         width: '45%',
+        lineHeight: 1.3,
         '@media (max-width: 490px)': {
           alignSelf: 'center',
           width: '70%',

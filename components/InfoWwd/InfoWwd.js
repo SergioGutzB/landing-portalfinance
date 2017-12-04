@@ -1,7 +1,5 @@
 import {styles} from './InfoWwd-style';
 import Radium from 'radium';
-import Widget from '../Widget/Widget';
-import Buttom from '../Button/Buttom';
 import { variables } from '../../styles/variables';
 import CardInfo from '../CardInfo/CardInfo';
 

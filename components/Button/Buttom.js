@@ -12,7 +12,7 @@ class Buttom extends React.Component {
   }
 
   render () {
-    const { color, border, borderColor, textColor} = this.props;
+    const { color, border, borderColor, textColor, action} = this.props;
     const labelStyle = this.props.labelStyle? this.props.labelStyle : {};
     const style = this.props.style? this.props.style : {};
 
@@ -26,7 +26,7 @@ class Buttom extends React.Component {
 
     return (
       <TouchableHighlight>
-        <button style={Object.assign({}, styles.container, styleButton, style)}>
+        <button style={Object.assign({}, styles.container, styleButton, style)} onClick={() => action()}>
           <p style={Object.assign({}, styles.label, labelStyle, {color: styleButton.color}) }>{this.props.children}</p>
         </button>
       </TouchableHighlight>

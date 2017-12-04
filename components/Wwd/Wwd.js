@@ -56,7 +56,7 @@ class Wwd extends React.Component {
               <h1 style={styles.wwd.content.title}>What we do</h1>
               <h1 style={styles.wwd.content.title}>at Portal Finance</h1>
               <h4 style={styles.wwd.content.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-              <Buttom color="transparent" border={true} borderColor="white" >LEARM MORRE</Buttom>
+              <Buttom color="transparent" border={true} borderColor="white" action={this.props.actions.gotoInfoWwd} >LEARM MORRE</Buttom>
             </div>
           </div>
           <img style={Object.assign({}, styles.wwd.image, image_syle)} src="http://www.www8-hp.com/sa/en/images/overview_hero_tcm_173_1302368.png" />

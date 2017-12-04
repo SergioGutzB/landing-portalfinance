@@ -50,7 +50,6 @@ class Header extends React.Component {
 
   render () {
     const { offset, height } = this.state;
-    //let offsetScroll = offset? (((offset*-1) < height) ? Math.abs(offset)/height : height) : 0  ;
     let offsetScroll = offset? ((Math.abs(offset) < (height/1.5)) ? 0 : 1) : 0  ;
     let padding = !!offsetScroll? 0 : 45;
     let logoHeight = !!offsetScroll? 55 : 95;
@@ -63,9 +62,6 @@ class Header extends React.Component {
       logoWidth: logoWidth,
       logoHeight: logoHeight,
     }
-
-    console.log("offset: ", offset, " height: ", height, " offsetScroll: ", offsetScroll, " operation: ", offsetScroll/height)
-    console.log(style);
 
     return (
       <div style={styles.box}>

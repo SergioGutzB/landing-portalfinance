@@ -22,8 +22,8 @@ class CardInfo extends React.Component {
       <div style={Object.assign({}, styles.card_info, style)}>
         <div style={styles.card_info.left}>
           <h1 style={styles.title}>{title}</h1>
-          {text? text.map(t =>
-            <p style={styles.text}>{t}</p>
+          {text? text.map((t, index) =>
+            <p style={styles.text} key={index}>{t}</p>
           ): null}
         </div>
         <div style={styles.card_info.right}>
