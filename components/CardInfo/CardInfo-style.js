@@ -26,7 +26,7 @@ const text = {
 
 export const styles = {
   card_info: {
-    widht: '100%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',

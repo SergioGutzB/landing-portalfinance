@@ -9,7 +9,7 @@ export const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     alingContent: 'center',
-    padding: '15px 0 70px'
+    padding: '15px 0 0px'
   },
 }
 

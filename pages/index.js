@@ -70,11 +70,11 @@ export default class Index extends React.Component {
     const actions = {
       gotoHome: (e) => this.gotoTo(e, this.refs.home_ref, 0),
       gotoMakes: (e) => this.gotoTo(e, this.refs.makes_ref, -55),
-      gotoWwd: (e) => this.gotoTo(e, this.refs.wwd_ref, -30),
-      gotoPartners: (e) => this.gotoTo(e, this.refs.partners_ref, 30),
+      gotoWwd: (e) => this.gotoTo(e, this.refs.wwd_ref, -100),
+      gotoPartners: (e) => this.gotoTo(e, this.refs.partners_ref, -150),
       gotoTeam: (e) => this.gotoTo(e, this.refs.team_ref, -10),
-      gotoInfoPartners: (e) => this.gotoTo(e, this.refs.infoPartners_ref, -260),
-      gotoInfoWwd: (e) => this.gotoTo(e, this.refs.infoWwd_ref, -450),
+      gotoInfoPartners: (e) => this.gotoTo(e, this.refs.infoPartners_ref, -80),
+      gotoInfoWwd: (e) => this.gotoTo(e, this.refs.infoWwd_ref, -60),
     }
     return (
       <StyleRoot>
@@ -84,8 +84,8 @@ export default class Index extends React.Component {
             <Home ref="home_ref" actions={actions}/>
             <Makes ref="makes_ref" />
             <Wwd ref="wwd_ref" actions={actions}/>
-            <InfoWwd ref="infoWwd_ref" />
             <Partners ref="partners_ref" actions={actions}/>
+            <InfoWwd ref="infoWwd_ref" />
             <InfoPartners ref="infoPartners_ref" />
             <Team ref="team_ref"/>
             <Footer />
