@@ -2,9 +2,12 @@
 echo "Hi, $USER !"
 echo "You're Starting Deployment Process PortalFinance Website...."
 
+. './deployment_files/.pf_deploy_config_website'
+echo "PF WebSite Deployment configuration Loaded!!"
+
 echo "Building App..."
 
-npm run build
+yarn run build
 
 echo "Removing Docker Container..."
 
