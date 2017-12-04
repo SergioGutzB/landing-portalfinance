@@ -11,26 +11,23 @@ class CardInfo extends React.Component {
   }
 
   render () {
-    const { image, title, text, orientation, color } = this.props;
+    const { Image, title, text, orientation, color } = this.props;
 
     const style = {
       backgroundColor: color? color : variables.dark_blue,
-      left: {
-        flex: (orientation === 'left')? 'flex-start' : 'flex-end',
-      },
-      right: {
-        flex: (orientation === 'right')? 'flex-end' : 'flex-start',
-      }
+      flexDirection: (orientation === 'left')? 'row' : 'row-reverse',
     }
 
     return (
       <div style={Object.assign({}, styles.card_info, style)}>
-        <div style={Object.assign({}, styles.card_info.left, style.left)}>
+        <div style={styles.card_info.left}>
           <h1 style={styles.title}>{title}</h1>
-          <p style={style.text}>{text}</p>
+          {text? text.map(t =>
+            <p style={styles.text}>{t}</p>
+          ): null}
         </div>
-        <div style={Object.assign({}, styles.card_info.right, style.right)}>
-          <img style={styles.image} src={image} />
+        <div style={styles.card_info.right}>
+          <Image style={styles.image} />
         </div>
       </div>
     )

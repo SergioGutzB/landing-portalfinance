@@ -48,6 +48,7 @@ export const styles = {
       color: variables.text,
       marginTop: 5,
       marginBottom: 5,
+      fontSize: '1rem',
     },
     button: {
       marginTop: 20,

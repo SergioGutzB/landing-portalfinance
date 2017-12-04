@@ -80,11 +80,11 @@ export default class Index extends React.Component {
             <Home ref="home_ref" actions={actions}/>
             <Makes ref="makes_ref" />
             <Wwd ref="wwd_ref"/>
+            <InfoWwd ref="infoWwd_ref" />
             <Partners ref="partners_ref"/>
             <Team ref="team_ref"/>
             <Footer />
             {/*
-            <InfoWwd ref="infoWwd_ref" />
             */}
           </div>
         </Provider>
