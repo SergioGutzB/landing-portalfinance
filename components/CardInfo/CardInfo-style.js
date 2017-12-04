@@ -15,13 +15,30 @@ const container = {
 
 const text = {
   flex: 1,
-  width: '100%',
   color: 'white',
   fontFamily: 'Roboto Light',
   marginTop: 0,
   marginBottom: 0,
   fontWeight: 500,
   textAlign: 'left',
+  '@media (max-width: 490px)': {
+    width: '70%',
+  },
+  '@media (min-width: 491px) and (max-width: 767px)': {
+    width: '70%',
+  },
+  '@media (min-width: 768px) and (max-width: 1024px)': {
+    width: '70%',
+  },
+  '@media (min-width: 1025px) and (max-width: 1225px)': {
+    width: '70%',
+  },
+  '@media (min-width: 1225px) and (max-width: 1461px)': {
+    width: '70%',
+  },
+  '@media (min-width: 1462px) ': {
+    width: '60%',
+  },
 }
 
 export const styles = {
@@ -49,11 +66,13 @@ export const styles = {
     ...text,
     fontSize: 70,
     lineHeight: 1,
+    marginBottom: 30,
   },
   text: {
     ...text,
     fontSize: '1rem',
     lineHeight: 1.3,
+    marginBottom: 15,
   }
 }
 

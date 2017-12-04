@@ -30,7 +30,7 @@ class Partners extends React.Component {
               border={true}
               borderColor={variables.light_blue}
               action={this.props.actions.gotoInfoPartners}
-            >LEARM MORRE</Buttom>
+            >LEARN MORE</Buttom>
           </div>
         </div>
 

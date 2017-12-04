@@ -80,16 +80,16 @@ export default class Index extends React.Component {
       <StyleRoot>
         <Provider userAgent={userAgent}>
           <div>
-            <Header ref="header_ref" actions={actions} offset={this.state.offsetScroll}/>
             <Home ref="home_ref" actions={actions}/>
             <Makes ref="makes_ref" />
             <Wwd ref="wwd_ref" actions={actions}/>
             <Partners ref="partners_ref" actions={actions}/>
-            <InfoWwd ref="infoWwd_ref" />
             <InfoPartners ref="infoPartners_ref" />
             <Team ref="team_ref"/>
             <Footer />
             {/*
+            <InfoWwd ref="infoWwd_ref" />
+            <Header ref="header_ref" actions={actions} offset={this.state.offsetScroll}/>
             */}
           </div>
         </Provider>

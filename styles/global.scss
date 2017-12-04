@@ -41,6 +41,28 @@
   src: url("/static/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Helvetica Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../static/fonts/Helvetica/HelveticaLTStd-Light.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../static/fonts/Helvetica/HelveticaLTStd-Blk.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica Roman';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../static/fonts/Helvetica/HelveticaLTStd-Roman.otf');
+}
+
+
 body {
   margin: 0;
   padding: 0;
