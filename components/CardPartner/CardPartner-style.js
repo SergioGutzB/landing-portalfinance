@@ -6,7 +6,6 @@ const text = {
   marginTop: 0,
   marginBottom: 0,
   fontWeight: 100,
-  width: '100%',
   textAlign: 'center',
 }
 
@@ -16,26 +15,70 @@ export const styles = {
   card: {
     paddingTop: padding,
     paddingBottom: padding,
-    paddingLeft: padding,
-    paddingRight: padding,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
     alingContent: 'center',
     alignSelf: 'stretch',
+    width: '50%',
+    '@media (max-width: 490px)': {
+      width: '100%',
+    },
     title: {
+      width: '100%',
       ...text,
-      fontSize: 50,
       marginBottom: 40,
       lineHeight: 1,
+      '@media (max-width: 490px)': {
+        width: 'calc(100% - 10px)',
+        fontSize: 30,
+      },
+      '@media (min-width: 491px) and (max-width: 767px)': {
+        width: 'calc(100% - 10px)',
+        fontSize: 30,
+      },
+      '@media (min-width: 768px) and (max-width: 1024px)': {
+        fontSize: 40,
+      },
+      '@media (min-width: 1025px) and (max-width: 1225px)': {
+        fontSize: 60,
+      },
+      '@media (min-width: 1225px) and (max-width: 1461px)': {
+        fontSize: 70,
+      },
+      '@media (min-width: 1462px) ': {
+        fontSize: 94,
+      },
     },
     text: {
       ...text,
       fontSize: '1rem',
-      padding: '0 20px',
+      padding: '8px 20px',
       lineHeight: 1.4,
       fontWeight: 100,
+      '@media (max-width: 490px)': {
+        width: 'calc(100% - 40px)',
+        fontSize: 14,
+      },
+      '@media (min-width: 491px) and (max-width: 767px)': {
+        width: 'calc(100% - 40px)',
+        fontSize: 16,
+      },
+      '@media (min-width: 768px) and (max-width: 1024px)': {
+        fontSize: 16,
+      },
+      '@media (min-width: 1025px) and (max-width: 1225px)': {
+        fontSize: 16,
+      },
+      '@media (min-width: 1225px) and (max-width: 1461px)': {
+        width: '70%',
+        fontSize: 16,
+      },
+      '@media (min-width: 1462px) ': {
+        width: '55%',
+        fontSize: '1rem',
+      },
     }
   }
 }
