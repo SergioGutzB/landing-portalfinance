@@ -10,6 +10,4 @@ export const variables = {
   white: "#00000",
   text_gray:"#a1a1a1",
   text: "#505050",
-  mint: "#00D784",
-  cyan: "#00BAF3"
 }

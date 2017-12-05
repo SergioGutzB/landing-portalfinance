@@ -11,7 +11,6 @@ const search = '../../static/images/search.png';
 
 class Wwd extends React.Component {
 
-
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -19,23 +18,9 @@ class Wwd extends React.Component {
     }
   }
 
-  componentWillMount () {
-    this.updateDimensions();
-  }
-
   componentDidMount () {
-    window.addEventListener("resize", this.updateDimensions);
     let { clientHeight} = this.refs.wwdRef;
-    console.log(clientHeight);
     this.setState({height: clientHeight})
-  }
-
-  componentWillUnmount () {
-    window.removeEventListener("resize", this.updateDimensions);
-  }
-
-  updateDimensions = () => {
-    //this.setState({ height });
   }
 
   render () {

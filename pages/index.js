@@ -16,6 +16,7 @@ import Contact from '../components/Contact/Contact';
 
 
 let scrollToComponent;
+let ticking = 0;
 
 export default class Index extends React.Component {
   static async getInitialProps({req, res, query, pathname, asPath, jsonPageRes  }) {
@@ -35,12 +36,23 @@ export default class Index extends React.Component {
       title: "Portal Finance",
       transform: null,
       offsetScroll: 0,
+      active: "HOME",
+      ticking: false
     }
   }
 
   componentDidMount () {
     scrollToComponent = require('react-scroll-to-component');
-    window.addEventListener('scroll', this.handleScroll);
+    const self = this;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame( () => {
+          self.handleScroll();
+          ticking = false;
+        });
+      }
+      ticking = true;
+    });
   }
 
   componentWillUnmount () {
@@ -50,15 +62,30 @@ export default class Index extends React.Component {
   getOffset = (element) => {
     let bounding = element.getBoundingClientRect();
     return {
-      top: bounding.top + document.body.scrollTop,
-      left: bounding.left + document.body.scrollLeft
+      top: bounding.top + document.body.scrollTop - 150,
+      left: bounding.left + document.body.scrollLeft,
+      height: bounding.height,
+      bottom: bounding.bottom
     };
   }
 
-  handleScroll = () => {
+  handleScroll = async () => {
     let startElement = ReactDOM.findDOMNode(this.refs.home_ref);
     let offset = this.getOffset(startElement)
-    this.setState({offsetScroll:offset.top})
+    let active = await this.getActiveScroll()
+    this.setState({offsetScroll:offset.top, active: active})
+  }
+
+  getActiveScroll = async () => {
+    let active = this.state.active;
+    let offset = 0;
+    await Object.keys(this.refs).map((e, index) => {
+      const element = ReactDOM.findDOMNode(this.refs[e])
+      const top = element.getBoundingClientRect().top;
+      if ((top + offset) >= 0 && (top - offset) <= window.innerHeight)
+        active = e
+    })
+    return active
   }
 
   gotoTo = (evt, ref, offset) => {
@@ -81,7 +108,7 @@ export default class Index extends React.Component {
       <StyleRoot>
         <Provider userAgent={userAgent}>
           <div>
-            <Header ref="header_ref" actions={actions} offset={this.state.offsetScroll}/>
+            <Header actions={actions} offset={this.state.offsetScroll} active={this.state.active}/>
             <Home ref="home_ref" actions={actions}/>
             <Makes ref="makes_ref" />
             <Wwd ref="wwd_ref" actions={actions}/>

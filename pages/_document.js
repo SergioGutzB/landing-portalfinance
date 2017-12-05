@@ -10,9 +10,10 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>PortalFinance</title>
+          <title>Portal Finance Inc</title>
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+          <link rel="shortcut icon" href="../static/images/favicon.ico" />
         </Head>
         <style dangerouslySetInnerHTML={{ __html: global }} />
         <body>

@@ -1,5 +1,5 @@
 import { variables } from '../../styles/variables';
-const Background = '../../static/images/foto1_fondos_1920x1098-01.jpg';
+const Background = '../../static/images/home/bacground.jpg';
 
 export const styles = {
   background: {

@@ -31,7 +31,40 @@ class Header extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    this.setState({offset: nextProps.offset})
+    if (nextProps.active){
+      let activeRef = nextProps.active;
+      let active = ""
+      switch (activeRef) {
+        case 'home_ref':
+          active= "HOME";
+          break;
+        case 'partners_ref':
+          active = 'PARTNERS'
+          break;
+        case 'infoPartners_ref':
+          active = 'PARTNERS'
+          break;
+        case 'wwd_ref':
+          active = 'WHAT WE DO'
+          break;
+        case 'infoWwd_ref':
+          active = 'WHAT WE DO'
+          break;
+        case 'team_ref':
+          active = 'TEAM'
+          break;
+        default:
+          active = 'HOME'
+
+      }
+
+      this.setState({
+      offset: nextProps.offset,
+      active: active
+      })
+    } else {
+      this.setState({offset: nextProps.offset})
+    }
   }
 
   componentDidMount() {
@@ -86,7 +119,7 @@ class Header extends React.Component {
                 borderBottomSize: size,
                 borderBottomStyle: 'solid',
                 borderBottomColor: 'rgba(0, 186, 186,'+opacity+')',
-                color: variables.jade,
+                color: variables.mint,
               }
               : {
                 color: 'white'

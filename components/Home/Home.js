@@ -25,7 +25,7 @@ class Home extends React.Component {
           <h1 style={styles.title}>Critical Finance</h1>
           <h4 style={styles.subTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
           <div style={styles.buttoms}>
-            <Buttom style={styles.buttoms.buttom} action={actions.gotoWwd} color={variables.jade}>WHAT WE DO</Buttom>
+            <Buttom style={styles.buttoms.buttom} action={actions.gotoWwd} color={variables.mint}>WHAT WE DO</Buttom>
             <div style={styles.buttoms.space}/>
             <Buttom style={styles.buttoms.buttom} border={true} borderColor="white" color="transparent" action={actions.gotoPartners}>OUR PARTNERS</Buttom>
           </div>
