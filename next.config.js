@@ -1,7 +1,9 @@
 const path = require('path')
 const glob = require('glob')
 
-const webpack = require('webpack')
+var webpack = require('webpack');
+var CompressionPlugin = require('compression-webpack-plugin');
+
 
 module.exports = {
   webpack: (config, { dev }) => {
@@ -39,9 +41,21 @@ module.exports = {
     )
     config.plugins.push(
       new webpack.DefinePlugin({
-      "global.GENTLY": false,
-
-      }))
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+      }),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.optimize.AggressiveMergingPlugin(),
+      new CompressionPlugin({
+        asset: "[path].gz[query]",
+        algorithm: "gzip",
+        test: /\.js$|\.css$|\.html$/,
+        threshold: 10240,
+        minRatio: 0.8
+      })
+    )
     return config
   },
   node: {
