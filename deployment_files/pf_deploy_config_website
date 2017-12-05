@@ -1,0 +1,7 @@
+REGION="us-east-1"
+TARGET_STAG_GROUP=""
+TARGET_PROD_GROUP=""
+PORT="8080"
+
+
+ssh -i ~/.ssh/pf-production-key.pem ec2-user@52.201.244.94

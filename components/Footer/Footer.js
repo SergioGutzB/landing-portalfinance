@@ -14,10 +14,8 @@ class Footer extends React.Component {
 
     return (
       <div style={styles.footer}>
-        <div style={styles.left}>
+        <div style={styles.center}>
           <p style={styles.copyright}>Copyright © 2017, PortalFinance</p>
-        </div>
-        <div style={styles.right}>
         </div>
       </div>
     )

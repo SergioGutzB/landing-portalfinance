@@ -2,15 +2,15 @@ import { variables } from '../../styles/variables';
 
 let container = {
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   justifyContent: "space-between",
-    alignContent: "center",
+  alignContent: "center",
 }
 
 export const styles = {
   footer: {
     background: variables.navy_blue,
-    height: 60,
+    height: 20,
     widht: '100%',
     padding: '10px 30px',
     color: 'white',
@@ -28,6 +28,12 @@ export const styles = {
   },
   copyright: {
     margin: 0,
+  },
+  center:{
+    display: "flex",
+    flexDirection: "row",
+    flex:'center',
+    justifyContent: "center",    
   }
 
 

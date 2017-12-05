@@ -12,6 +12,7 @@ import Partners from '../components/Partners/Partners';
 import Makes from '../components/Makes/Makes';
 import InfoWwd from '../components/InfoWwd/InfoWwd';
 import InfoPartners from '../components/InfoPartners/InfoPartners';
+import Contact from '../components/Contact/Contact';
 
 
 let scrollToComponent;
@@ -88,6 +89,7 @@ export default class Index extends React.Component {
             <InfoWwd ref="infoWwd_ref" />
             <InfoPartners ref="infoPartners_ref" />
             <Team ref="team_ref"/>
+            <Contact/>
             <Footer />
             {/*
             */}
