@@ -43,16 +43,7 @@ export default class Index extends React.Component {
 
   componentDidMount () {
     scrollToComponent = require('react-scroll-to-component');
-    const self = this;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame( () => {
-          self.handleScroll();
-          ticking = false;
-        });
-      }
-      ticking = true;
-    });
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount () {
@@ -69,19 +60,21 @@ export default class Index extends React.Component {
     };
   }
 
-  handleScroll = async () => {
+  handleScroll = () => {
     let startElement = ReactDOM.findDOMNode(this.refs.home_ref);
     let offset = this.getOffset(startElement)
-    let active = await this.getActiveScroll()
-    this.setState({offsetScroll:offset.top, active: active})
+    //let active = await this.getActiveScroll()
+    this.setState({offsetScroll:offset.top})
   }
 
   getActiveScroll = async () => {
     let active = this.state.active;
-    let offset = 0;
     await Object.keys(this.refs).map((e, index) => {
       const element = ReactDOM.findDOMNode(this.refs[e])
       const top = element.getBoundingClientRect().top;
+      //let offset = this.getOffset(element)
+      let offset = 0
+      //if (offset.top < 0 && offset.top > offset.height*-1 )
       if ((top + offset) >= 0 && (top - offset) <= window.innerHeight)
         active = e
     })
@@ -100,9 +93,10 @@ export default class Index extends React.Component {
       gotoMakes: (e) => this.gotoTo(e, this.refs.makes_ref, -55),
       gotoWwd: (e) => this.gotoTo(e, this.refs.wwd_ref, -100),
       gotoPartners: (e) => this.gotoTo(e, this.refs.partners_ref, -150),
-      gotoTeam: (e) => this.gotoTo(e, this.refs.team_ref, -10),
+      gotoTeam: (e) => this.gotoTo(e, this.refs.team_ref, -150),
       gotoInfoPartners: (e) => this.gotoTo(e, this.refs.infoPartners_ref, -80),
       gotoInfoWwd: (e) => this.gotoTo(e, this.refs.infoWwd_ref, -60),
+      gotoContact: (e) => this.gotoTo(e, this.refs.contact_ref, 0),
     }
     return (
       <StyleRoot>
@@ -116,7 +110,7 @@ export default class Index extends React.Component {
             <InfoWwd ref="infoWwd_ref" />
             <InfoPartners ref="infoPartners_ref" />
             <Team ref="team_ref"/>
-            <Contact/>
+            <Contact ref="contact_ref"/>
             <Footer />
             {/*
             */}

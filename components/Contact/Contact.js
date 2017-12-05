@@ -47,7 +47,7 @@ class Contact extends React.Component{
                 </div>
                 <div style={styles.element}>
                     <div style={styles.icon_area}>
-                        <Phone style={Object.assign({}, styles.icon, mail_style)} />                        
+                        <Phone style={Object.assign({}, styles.icon, mail_style)} />
                         <Usa style={Object.assign({}, styles.flag_icon, mail_style)} />
                     </div>
                     <div style={styles.text}>
@@ -56,16 +56,16 @@ class Contact extends React.Component{
                 </div>
                 <div style={styles.element}>
                     <div style={styles.icon_area}>
-                        <Phone style={Object.assign({}, styles.icon, mail_style)} />                        
+                        <Phone style={Object.assign({}, styles.icon, mail_style)} />
                         <Colombia style={Object.assign({}, styles.flag_icon, mail_style)} />
                     </div>
                     <div style={styles.text}>
-                    +5713571162 
+                    +5713571162
                     </div>
                 </div>
                 <div style={styles.element}>
                     <div style={styles.icon_area}>
-                        <Phone style={Object.assign({}, styles.icon, mail_style)} />                        
+                        <Phone style={Object.assign({}, styles.icon, mail_style)} />
                         <Mexico style={Object.assign({}, styles.flag_icon, mail_style)} />
                     </div>
                     <div style={styles.text}>
@@ -74,7 +74,7 @@ class Contact extends React.Component{
                 </div>
                 <div style={styles.element}>
                     <div style={styles.icon_area}>
-                        <Phone style={Object.assign({}, styles.icon, mail_style)} />                        
+                        <Phone style={Object.assign({}, styles.icon, mail_style)} />
                         <Chile style={Object.assign({}, styles.flag_icon, mail_style)} />
                     </div>
                     <div style={styles.text}>
@@ -82,26 +82,27 @@ class Contact extends React.Component{
                     </div>
                 </div>
             </div>
+            <img src="../../static/images/mapa2.png" style={{height: 190, width: 'auto', marginLeft: -200}}/>
             <div style={styles.social}>
                 <div style={styles.title}>FOLLOW US ON </div>
                 <div style={styles.element_social}>
                     <div style={styles.icon_area}>
-                        <img src={fb} style={styles.social_icon}/>                       
+                        <img src={fb} style={styles.social_icon}/>
                     </div>
                 </div>
                 <div style={styles.element_social}>
                     <div style={styles.icon_area}>
-                        <img src={tw} style={styles.social_icon}/>                       
+                        <img src={tw} style={styles.social_icon}/>
                     </div>
                 </div>
                 <div style={styles.element_social}>
                     <div style={styles.icon_area}>
-                        <img src={inst} style={styles.social_icon}/>                       
+                        <img src={inst} style={styles.social_icon}/>
                     </div>
                 </div>
-            
+
             </div>
-        </div>        
+        </div>
     );
 
   }

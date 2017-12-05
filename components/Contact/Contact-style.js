@@ -13,8 +13,8 @@ let container = {
         height: 200,
         widht: '100%',
         placeContent:'center',
-        padding: '30px 80px 0px 80px',        
-        ...container        
+        padding: '30px 14%',
+        ...container
     },
     contact: {
         ...container,
@@ -36,27 +36,27 @@ let container = {
       fontFamily: 'Roboto Light',
       color:'white',
       fontSize: 20,
-      fontWeight: 'bold'     
+      fontWeight: 'bold'
     },
     element:{
       display: "flex",
       flexDirection: "row",
       padding: "0px 10px",
-      height: "60px",      
+      height: "60px",
     },
     element_social:{
       display: "flex",
       flexDirection: "row",
       padding: "0px 10px",
       height: "60px",
-      justifyContent: "center",      
+      justifyContent: "center",
     },
     icon:{
       width: "20px",
       height: "auto",
       AlignSelf: "flex-end",
       marginTop: "10px",
-      justifyContent: "space-between"      
+      justifyContent: "space-between"
     },
     flag_icon:{
       width: "20px",
@@ -64,7 +64,7 @@ let container = {
       AlignSelf: "flex-end",
       marginTop: "10px",
       marginLeft:"5px",
-      justifyContent: "space-between"      
+      justifyContent: "space-between"
     },
     social_icon:{
       width: "50px",
@@ -79,6 +79,6 @@ let container = {
       fontFamily: 'Roboto Light',
       marginTop: "10px",
       alignContent: "left",
-      
+
     }
-  }    
+  }

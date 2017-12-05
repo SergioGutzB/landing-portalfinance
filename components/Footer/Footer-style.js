@@ -9,10 +9,10 @@ let container = {
 
 export const styles = {
   footer: {
-    background: variables.navy_blue,
+    background: variables.dark_blue,
     height: 20,
     widht: '100%',
-    padding: '10px 30px',
+    padding: '20px 30px',
     color: 'white',
     alignItems: "center",
     alignContent: "center",
@@ -33,7 +33,7 @@ export const styles = {
     display: "flex",
     flexDirection: "row",
     flex:'center',
-    justifyContent: "center",    
+    justifyContent: "center",
   }
 
 

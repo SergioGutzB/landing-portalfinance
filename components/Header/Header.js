@@ -31,40 +31,7 @@ class Header extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    if (nextProps.active){
-      let activeRef = nextProps.active;
-      let active = ""
-      switch (activeRef) {
-        case 'home_ref':
-          active= "HOME";
-          break;
-        case 'partners_ref':
-          active = 'PARTNERS'
-          break;
-        case 'infoPartners_ref':
-          active = 'PARTNERS'
-          break;
-        case 'wwd_ref':
-          active = 'WHAT WE DO'
-          break;
-        case 'infoWwd_ref':
-          active = 'WHAT WE DO'
-          break;
-        case 'team_ref':
-          active = 'TEAM'
-          break;
-        default:
-          active = 'HOME'
-
-      }
-
-      this.setState({
-      offset: nextProps.offset,
-      active: active
-      })
-    } else {
-      this.setState({offset: nextProps.offset})
-    }
+    this.setState({offset: nextProps.offset})
   }
 
   componentDidMount() {
@@ -162,7 +129,7 @@ class Header extends React.Component {
                     { menu('TEAM', this.props.actions.gotoTeam)}
                   </TouchableHighlight>
                   <TouchableHighlight>
-                    { menu('CONTACT')}
+                    { menu('CONTACT', this.props.actions.gotoContact)}
                   </TouchableHighlight>
                 </ul>
               </div>
