@@ -5,8 +5,6 @@ import { styles } from '../styles/index.js';
 import Header from '../components/Header/Header';
 import Wwd from '../components/Wwd/Wwd';
 import Home from '../components/Home/Home';
-<<<<<<< HEAD
-=======
 import Team from '../components/Team/Team';
 import Radium, { StyleRoot } from 'radium';
 import Footer from '../components/Footer/Footer';
@@ -14,10 +12,10 @@ import Partners from '../components/Partners/Partners';
 import Makes from '../components/Makes/Makes';
 import InfoWwd from '../components/InfoWwd/InfoWwd';
 import InfoPartners from '../components/InfoPartners/InfoPartners';
+import Contact from '../components/Contact/Contact';
 
 
 let scrollToComponent;
->>>>>>> 17ef6cdf464ff20dc136a2de3cf513768e3ba90d
 
 export default class Index extends React.Component {
   static async getInitialProps({req, res, query, pathname, asPath, jsonPageRes  }) {
@@ -80,15 +78,6 @@ export default class Index extends React.Component {
       gotoInfoWwd: (e) => this.gotoTo(e, this.refs.infoWwd_ref, -450),
     }
     return (
-<<<<<<< HEAD
-      <Provider userAgent={userAgent}>
-        <div>
-          <Header title="Portalfinance"/>
-          <Home />
-          <Wwd/>
-        </div>
-      </Provider>
-=======
       <StyleRoot>
         <Provider userAgent={userAgent}>
           <div>
@@ -100,13 +89,13 @@ export default class Index extends React.Component {
             <Partners ref="partners_ref" actions={actions}/>
             <InfoPartners ref="infoPartners_ref" />
             <Team ref="team_ref"/>
+            <Contact/>
             <Footer />
             {/*
             */}
           </div>
         </Provider>
       </StyleRoot>
->>>>>>> 17ef6cdf464ff20dc136a2de3cf513768e3ba90d
     )
   }
 }
