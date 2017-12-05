@@ -6,6 +6,7 @@ import { styles } from './Header-style';
 import Radium from 'radium';
 import { Motion, spring } from 'react-motion';
 import Logo from '../../static/images/logo.svg';
+import { variables } from '../../styles/variables';
 
 const springConfig = {stiffness: 170, damping: 26};
 
@@ -16,6 +17,7 @@ if (!process.tapEventInjected) {
   process.tapEventInjected = true
 }
 
+
 class Header extends React.Component {
 
   constructor(props, context) {
@@ -24,6 +26,7 @@ class Header extends React.Component {
       height: 0,
       width: 0,
       start: 100,
+      active: "HOME"
     }
   }
 
@@ -55,12 +58,44 @@ class Header extends React.Component {
     let logoHeight = !!offsetScroll? 55 : 95;
     let logoWidth = !!offsetScroll? 137 : (width >= 768 && width < 1024 )? 150 : 237;
 
+
     const style = {
       opacity: spring(offsetScroll),
       padding: spring(padding),
       height: spring(!!offsetScroll? 80 : 100),
       logoWidth: logoWidth,
       logoHeight: logoHeight,
+    }
+
+    const menu = (text, action) => {
+      const change = () => {
+        this.setState({active: text});
+        action()
+      }
+      const active = (this.state.active === text)? true : false;
+
+      const styleActive = {
+        size: spring(active? 2 : 0, springConfig),
+        opacity: spring(active? 1 : 0, springConfig),
+      }
+
+      return (
+        <Motion style={styleActive}>
+          {({size, opacity, color}) =>
+            <li style={Object.assign({}, styles.menu.item, active? {
+                borderBottomSize: size,
+                borderBottomStyle: 'solid',
+                borderBottomColor: 'rgba(0, 186, 186,'+opacity+')',
+                color: variables.jade,
+              }
+              : {
+                color: 'white'
+              })}
+              onClick={() => change()}
+            >{text}</li>
+          }
+        </Motion>
+      )
     }
 
     return (
@@ -72,7 +107,6 @@ class Header extends React.Component {
             paddingTop: padding,
             paddingBottom: padding,
             height: height,
-
           })}>
               <div style={styles.container.left}>
                 <Logo style={Object.assign({},styles.logo, {height: logoHeight, width: logoWidth})} />
@@ -83,19 +117,19 @@ class Header extends React.Component {
               <div style={styles.container.right}>
                 <ul style={styles.menu}>
                   <TouchableHighlight>
-                    <li style={styles.menu.item} onClick={() => this.props.actions.gotoHome()}>HOME</li>
+                    { menu('HOME', this.props.actions.gotoHome)}
                   </TouchableHighlight>
                   <TouchableHighlight>
-                    <li style={styles.menu.item} onClick={() => this.props.actions.gotoWwd()}>WHAT WE DO</li>
+                    { menu('WHAT WE DO', this.props.actions.gotoWwd)}
                   </TouchableHighlight>
                   <TouchableHighlight>
-                    <li style={styles.menu.item} onClick={() => this.props.actions.gotoPartners()}>PARTNERS</li>
+                    { menu('PARTNERS', this.props.actions.gotoPartners)}
                   </TouchableHighlight>
                   <TouchableHighlight>
-                    <li style={styles.menu.item} onClick={() => this.props.actions.gotoTeam()}>TEAM</li>
+                    { menu('TEAM', this.props.actions.gotoTeam)}
                   </TouchableHighlight>
                   <TouchableHighlight>
-                    <li style={styles.menu.item} >CONTACT</li>
+                    { menu('CONTACT')}
                   </TouchableHighlight>
                 </ul>
               </div>

@@ -63,27 +63,27 @@ export const styles = {
     item: {
       color: "white",
       fontFamily: "helvetica",
-      padding: "0",
       fontSize: 14,
       whiteSpace:'nowrap',
+      paddingBottom: 3,
       '@media (max-width: 479px)': {
-        paddingLeft: 0,
+        marginLeft: 0,
         fontSize: 12,
       },
       '@media (min-width: 480px) and (max-width: 767px)': {
-        paddingLeft: 30,
+        marginLeft: 30,
       },
       '@media (min-width: 768px) and (max-width: 1024px)': {
-        paddingLeft: 35,
+        marginLeft: 35,
       },
       '@media (min-width: 1025px) and (max-width: 1225px)': {
-        paddingLeft: 40,
+        marginLeft: 40,
       },
       '@media (min-width: 1225px) and (max-width: 1461px)': {
-        paddingLeft: 45,
+        marginLeft: 45,
       },
       '@media (min-width: 1462px)': {
-        paddingLeft: 50,
+        marginLeft: 50,
       },
     }
   },
