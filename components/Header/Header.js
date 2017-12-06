@@ -52,9 +52,10 @@ class Header extends React.Component {
   }
 
   render () {
-    const { offset, height, width } = this.state;
-    let offsetScroll = offset? ((Math.abs(offset) < (height/1.5)) ? 0 : 1) : 0  ;
-    let padding = !!offsetScroll? 0 : 45;
+    const { height, width } = this.state;
+    const offset = Math.abs(this.state.offset)
+    let offsetScroll = offset? ((offset < 220) ? 0 : ((offset-220)/120 < 1)? (offset-220)/120 : 1) : 0  ;
+    let padding = !!offsetScroll? (45 - (offsetScroll*45)) : 45;
     let logoHeight = !!offsetScroll? 55 : 95;
     let logoWidth = !!offsetScroll? 137 : (width >= 768 && width < 1024 )? 150 : 237;
 
