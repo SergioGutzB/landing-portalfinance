@@ -8,9 +8,6 @@ import Mexico from '../../static/images/mexico.svg';
 import Chile from '../../static/images/chile.svg';
 import Usa from '../../static/images/united-states.svg';
 import Phone from '../../static/images/phone-call.svg';
-const fb = '../../static/images/facebook.png';
-const tw = '../../static/images/twitter.png';
-const inst = '../../static/images/instagram.png';
 
 
 class Contact extends React.Component{
@@ -83,25 +80,6 @@ class Contact extends React.Component{
                 </div>
             </div>
             <img src="../../static/images/mapa2.png" style={{height: 190, width: 'auto', marginLeft: -200}}/>
-            <div style={styles.social}>
-                <div style={styles.title}>FOLLOW US ON </div>
-                <div style={styles.element_social}>
-                    <div style={styles.icon_area}>
-                        <img src={fb} style={styles.social_icon}/>
-                    </div>
-                </div>
-                <div style={styles.element_social}>
-                    <div style={styles.icon_area}>
-                        <img src={tw} style={styles.social_icon}/>
-                    </div>
-                </div>
-                <div style={styles.element_social}>
-                    <div style={styles.icon_area}>
-                        <img src={inst} style={styles.social_icon}/>
-                    </div>
-                </div>
-
-            </div>
         </div>
     );
 

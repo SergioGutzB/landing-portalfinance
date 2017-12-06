@@ -24,14 +24,6 @@ let container = {
         justifyContent: "space-between",
         alignContent: "center",
       },
-    social: {
-        ...container,
-        flex: 'flex-end',
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignContent: "center",
-      },
     title:{
       fontFamily: 'Roboto Light',
       color:'white',
@@ -43,13 +35,6 @@ let container = {
       flexDirection: "row",
       padding: "0px 10px",
       height: "60px",
-    },
-    element_social:{
-      display: "flex",
-      flexDirection: "row",
-      padding: "0px 10px",
-      height: "60px",
-      justifyContent: "center",
     },
     icon:{
       width: "20px",
@@ -65,13 +50,6 @@ let container = {
       marginTop: "10px",
       marginLeft:"5px",
       justifyContent: "space-between"
-    },
-    social_icon:{
-      width: "50px",
-      height: "auto",
-      AlignSelf: "flex-end",
-      marginTop: "10px",
-      justifyContent: "center",
     },
     text:{
       color:'white',
