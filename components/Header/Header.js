@@ -54,16 +54,15 @@ class Header extends React.Component {
   render () {
     const { height, width } = this.state;
     const offset = Math.abs(this.state.offset)
-    let offsetScroll = offset? ((offset < 220) ? 0 : ((offset-220)/120 < 1)? (offset-220)/120 : 1) : 0  ;
-    let padding = !!offsetScroll? (45 - (offsetScroll*45)) : 45;
-    let logoHeight = !!offsetScroll? 55 : 95;
-    let logoWidth = !!offsetScroll? 137 : (width >= 768 && width < 1024 )? 150 : 237;
-
+    let offsetScroll = offset? ((offset < 220) ? 0 : ((offset-220)/100 < 1)? (offset-220)/100 : 1) : 0  ;
+    let padding = !!offsetScroll? (45 - offsetScroll*45) : 45;
+    let logoHeight = !!offsetScroll? ((95 - offsetScroll*95) > 55? (95 - offsetScroll*95) : 55)  : 95;
+    let logoWidth = !!offsetScroll? ((237 - offsetScroll*237) > 137? (237 - offsetScroll*237) : 137) : (width >= 768 && width < 1024 )? ((237 - offsetScroll*237) > 150? (237 - offsetScroll*237) : 150) : 237;
 
     const style = {
-      opacity: spring(offsetScroll),
-      padding: spring(padding),
-      height: spring(!!offsetScroll? 80 : 100),
+      opacity: (offsetScroll),
+      padding: (padding),
+      height: !!offsetScroll? 80 : 100,
       logoWidth: logoWidth,
       logoHeight: logoHeight,
     }
@@ -101,16 +100,14 @@ class Header extends React.Component {
 
     return (
       <div style={styles.box}>
-        <Motion style={style}>
-          {({opacity, padding, logoHeight, logoWidth, height}) =>
           <div style={Object.assign({}, styles.container, {
-            backgroundColor: 'rgba(0,76,131,'+opacity+')',
-            paddingTop: padding,
-            paddingBottom: padding,
-            height: height,
+            backgroundColor: 'rgba(0,76,131,'+style.opacity+')',
+            paddingTop: style.padding,
+            paddingBottom: style.padding,
+            height: style.height,
           })}>
               <div style={styles.container.left}>
-                <Logo style={Object.assign({},styles.logo, {height: logoHeight, width: logoWidth})} />
+                <Logo style={Object.assign({},styles.logo, {height: style.logoHeight, width: style.logoWidth})} />
               </div>
 
               <div style={styles.center}></div>
@@ -136,7 +133,6 @@ class Header extends React.Component {
               </div>
             </div>
           }
-        </Motion>
       </div>
     )
   }
