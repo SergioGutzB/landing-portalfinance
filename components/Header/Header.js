@@ -17,6 +17,9 @@ if (!process.tapEventInjected) {
   process.tapEventInjected = true
 }
 
+let offset = 0;
+let height = 0;
+let width = 0;
 
 class Header extends React.Component {
 
@@ -31,40 +34,45 @@ class Header extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    this.setState({offset: nextProps.offset})
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.updateWindowDimensions);
-    this.updateWindowDimensions();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
+    offset = Math.abs(nextProps.offset);
   }
 
   componentWillMount(){
+    offset = Math.abs(this.props.offset);
     this.updateWindowDimensions();
   }
 
   updateWindowDimensions = () => {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    width = window.innerWidth;
+    height = window.innerHeight;
   }
 
   render () {
-    const { height, width } = this.state;
-    const offset = Math.abs(this.state.offset)
-    let offsetScroll = offset? ((offset < 220) ? 0 : ((offset-220)/100 < 1)? (offset-220)/100 : 1) : 0  ;
-    let padding = !!offsetScroll? (45 - offsetScroll*45) : 45;
-    let logoHeight = !!offsetScroll? ((95 - offsetScroll*95) > 55? (95 - offsetScroll*95) : 55)  : 95;
-    let logoWidth = !!offsetScroll? ((237 - offsetScroll*237) > 137? (237 - offsetScroll*237) : 137) : (width >= 768 && width < 1024 )? ((237 - offsetScroll*237) > 150? (237 - offsetScroll*237) : 150) : 237;
+    //console.log(offset);
+    //let offsetScroll = offset? ((offset < 220) ? 0 : ((offset-220)/100 < 1)? (offset-220)/100 : 1) : 0  ;
+    //let padding = !!offsetScroll? (45 - offsetScroll*45) : 45;
+    //let logoHeight = !!offsetScroll? ((95 - offsetScroll*95) > 55? (95 - offsetScroll*95) : 55)  : 95;
+    //let logoWidth = !!offsetScroll? ((237 - offsetScroll*237) > 137? (237 - offsetScroll*237) : 137) : (width >= 768 && width < 1024 )? ((237 - offsetScroll*237) > 150? (237 - offsetScroll*237) : 150) : 237;
+    let offsetScroll = offset? ((offset < (220)) ? 0 : 1) : 0  ;
+    let padding = !!offsetScroll? 0 : 45;
+    let logoHeight = !!offsetScroll? 55 : 95;
+    let logoWidth = !!offsetScroll? 137 : (width >= 768 && width < 1024 )? 150 : 237;
+
+
+    //const style = {
+      //opacity: (offsetScroll),
+      //padding: (padding),
+      //height: !!offsetScroll? 80 : 100,
+      //logoWidth: logoWidth,
+      //logoHeight: logoHeight,
+    //}
 
     const style = {
-      opacity: (offsetScroll),
-      padding: (padding),
-      height: !!offsetScroll? 80 : 100,
-      logoWidth: logoWidth,
-      logoHeight: logoHeight,
+      opacity: spring(offsetScroll),
+      padding: spring(padding),
+      height: spring(!!offsetScroll? 80 : 100),
+      logoWidth: spring(logoWidth),
+      logoHeight: spring(logoHeight),
     }
 
     const menu = (text, action) => {
@@ -100,14 +108,16 @@ class Header extends React.Component {
 
     return (
       <div style={styles.box}>
+        <Motion style={style}>
+          {({opacity, padding, logoHeight, logoWidth, height}) =>
           <div style={Object.assign({}, styles.container, {
-            backgroundColor: 'rgba(0,76,131,'+style.opacity+')',
-            paddingTop: style.padding,
-            paddingBottom: style.padding,
-            height: style.height,
+            backgroundColor: 'rgba(0,76,131,'+ opacity+')',
+            paddingTop: padding,
+            paddingBottom: padding,
+            height: height,
           })}>
               <div style={styles.container.left}>
-                <Logo style={Object.assign({},styles.logo, {height: style.logoHeight, width: style.logoWidth})} />
+                <Logo style={Object.assign({},styles.logo, {height: logoHeight, width: logoWidth})} />
               </div>
 
               <div style={styles.center}></div>
@@ -133,6 +143,7 @@ class Header extends React.Component {
               </div>
             </div>
           }
+        </Motion>
       </div>
     )
   }

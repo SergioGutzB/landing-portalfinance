@@ -64,7 +64,7 @@ export default class Index extends React.Component {
     let startElement = ReactDOM.findDOMNode(this.refs.home_ref);
     let offset = this.getOffset(startElement)
     //let active = await this.getActiveScroll()
-    this.setState({offsetScroll:offset.top})
+    offset.top > -450? this.setState({offsetScroll:offset.top}) : null;
   }
 
   getActiveScroll = async () => {
