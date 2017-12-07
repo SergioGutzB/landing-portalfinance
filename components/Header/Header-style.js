@@ -27,9 +27,10 @@ export const styles = {
     paddingRight: padding,
     '@media (max-width: 479px)': {
       paddingTop: 0,
-      paddingBottom: 20,
+      paddingBottom: 0,
       paddingLeft: 20,
       paddingRight: 20,
+      height: heightLogo-20,
     },
     left: {
       '@media (max-width: 767px)': {
