@@ -23,7 +23,7 @@ class Home extends React.Component {
         <div style={styles.center}>
           <h1 style={styles.title}>Transforming Mission</h1>
           <h1 style={styles.title}>Critical Finance</h1>
-          <h4 style={styles.subTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
+          <h4 style={styles.subTitle}></h4>
           <div style={styles.buttoms}>
             <Buttom style={styles.buttoms.buttom} action={actions.gotoWwd} color={variables.mint}>WHAT WE DO</Buttom>
             <div style={styles.buttoms.space}/>
