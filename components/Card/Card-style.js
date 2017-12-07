@@ -5,7 +5,7 @@ export const styles = {
     margin: '0 25px',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     '@media (max-width: 490px)': {
       width: '100%',
@@ -44,7 +44,6 @@ export const styles = {
   description:{
     fontWeight: 100,
     fontFamily: 'Roboto Light',
-    minWidth: '18vw',
     '@media (max-width: 490px)': {
       fontSize: 14,
     },
@@ -89,5 +88,9 @@ export const styles = {
     height: 'auto',
     alignSelf: 'flex-end',
     marginTop: 10,
+  },
+  link: {
+    alignSelf: 'flex-end',
+    width: '100%',
   }
 }

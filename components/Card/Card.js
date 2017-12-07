@@ -30,7 +30,7 @@ class Card extends React.Component {
           <h3 style={styles.name}>{first_name}</h3>
           <h3 style={styles.name}>{last_name}</h3>
           <p style={styles.description}>{description}</p>
-          <a href={"mailto:"+link} target="_top">
+          <a style={styles.link} href={"mailto:"+link} target="_top">
             <Mail style={Object.assign({}, styles.mail, mail_style)} />
           </a>
         </div>

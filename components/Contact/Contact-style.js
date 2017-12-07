@@ -27,6 +27,21 @@ export const styles = {
       flexDirection: "column",
       padding: '30px 45px',
     },
+    '@media (min-width: 480px) and (max-width: 767px)': {
+      padding: '30px 15px',
+    },
+    '@media (min-width: 768px) and (max-width: 1024px)': {
+      padding: '30px 35px',
+    },
+    '@media (min-width: 1025px) and (max-width: 1225px)': {
+      padding: '30px 14%',
+    },
+    '@media (min-width: 1225px) and (max-width: 1461px)': {
+      padding: '30px 14%',
+    },
+    '@media (min-width: 1462px)': {
+      padding: '30px 14%',
+    },
   },
   contact: {
     flex: 'flex-start',
@@ -37,6 +52,9 @@ export const styles = {
     marginRight: 40,
     '@media (max-width: 479px)': {
       marginRight: 0,
+    },
+    '@media (min-width: 480px) and (max-width: 767px)': {
+      marginRight: 5,
     },
   },
   title:{
