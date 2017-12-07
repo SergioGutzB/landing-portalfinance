@@ -13,15 +13,16 @@ class InfoPartners extends React.Component {
 
   render () {
 
-    const title = ["At Portal Finance we are looking to expand", "Become a Portal Finance Partner"]
-    const subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    const title = ["At Portal Finance we are looking to expand become a Portal Finance Partner"]
+    //const subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    const subtitle = ""
 
     const partners = [
       {
         title: "INVOICE ORIGINATORS",
         text: [
           "If you are are a provider of e-Invoicing in any form ERP, Invoicing, Accounting or any other B2B focused application looking to integrate and provide in app financing not only providing your users with a real and tangible added value but also generating a new revenue stream for your company.",
-          "If you have not yet integrated an e-Invoicing solution we can guide you through the process in any of the 10 Latin American Countries though our partnership with Gosocket (www.gosocket.net).",
+          //"If you have not yet integrated an e-Invoicing solution we can guide you through the process in any of the 10 Latin American Countries though our partnership with Gosocket (www.gosocket.net).",
           "If you would like to know more reach out to partners@portalfinance.co"
         ],
         color: variables.light_blue,

@@ -44,6 +44,7 @@ export const styles = {
   description:{
     fontWeight: 100,
     fontFamily: 'Roboto Light',
+    minWidth: '18vw',
     '@media (max-width: 490px)': {
       fontSize: 14,
     },

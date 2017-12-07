@@ -50,6 +50,8 @@ export default class Index extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+
+
   getOffset = (element) => {
     let bounding = element.getBoundingClientRect();
     return {

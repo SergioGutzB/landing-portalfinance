@@ -40,7 +40,7 @@ class Wwd extends React.Component {
             <div style={styles.wwd.content.box}>
               <h1 style={styles.wwd.content.title}>What we do</h1>
               <h1 style={styles.wwd.content.title}>at Portal Finance</h1>
-              <h4 style={styles.wwd.content.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+              <h4 style={styles.wwd.content.text}>We use technology to understand and assess a company, they worked hard to build their businesses and we work hard to value that work</h4>
               <Buttom color="transparent" border={true} borderColor="white" action={this.props.actions.gotoInfoWwd} >LEARN MORE</Buttom>
             </div>
           </div>

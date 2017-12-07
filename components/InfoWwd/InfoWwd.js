@@ -24,8 +24,8 @@ class InfoWwd extends React.Component {
         Image: Api,
         title: "Apis",
         text: [
-          "We provide APIs that process eInvoices (group, qualify, offer, purchase, predict discount rates, etc...) based on the a proprietary algorithm that determines the quality of an invoice in real time.",
-          "We process over 500.000 invoices per day and are quickly expanding."
+          "We provide APIs that allow financial institutions to tightly integrate our technology into their current stacks and operating systems.",
+          "Our micro service architecture allows us to integrate into existing workflows, improving, automating and adding value where we can throughout the process flow.",
         ],
         orientation: 'left',
         color: variables.dark_blue,
@@ -35,7 +35,7 @@ class InfoWwd extends React.Component {
         Image: Business,
         title: "Business Intelligence",
         text: [
-          "Making sense of large sets of data to analyze and design risk and pricing strategies requires developing proprietary dashboards and reporting tools so decision makers can understand and leverage the data to fine tune their strategies."
+          "Our proprietary reporting system based off of our risk and data aggregation systems allows users to see all relevant information, we create snapshots of the information available at the exact moment that decisions were taken"
         ],
         orientation: 'right',
         color: variables.cyan,
@@ -43,9 +43,9 @@ class InfoWwd extends React.Component {
       {
         id: 3,
         Image: Generation,
-        title: "LEAD GENERATION",
+        title: "Sales Engine",
         text: [
-          "We partner with E-Invoice providers looking to connect their clients with Financiers providing invoice classification and business intelligence solutions easing the deployment of invoice financing services."
+          "With a better understanding of the company Portal Finance provides financial executives with the insights to better serve their customer base by providing offers based on dynamic pricing to the entire invoice stock of the customer."
         ],
         orientation: 'left',
         color: variables.light_blue,
@@ -55,7 +55,7 @@ class InfoWwd extends React.Component {
         Image: Made,
         title: "TAILOR MADE SOLUTIONS",
         text: [
-          "We develop custom solutions for financial partners or eInvoice networks that are looking for turn key solutions that leverage our APIs and know-how to develop world class solutions that add real value.",
+          "Our micro services architecture allows us to provide Financial Institutions with tailor made world class solutions that integrate or as stand alones for improving and adding value to their current workflows.",
         ],
         orientation: 'right',
         color: variables.jade,

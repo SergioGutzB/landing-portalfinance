@@ -21,8 +21,10 @@ class Partners extends React.Component {
             <h1 style={styles.partners.title}>The IFC -World Bank estimates SMES in developing countries face an estimated financing gap of $2.1 to $2.6 trillon. </h1>
           </div>
           <div style={styles.partners.right}>
-            <p style={styles.partners.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p style={styles.partners.description}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p style={styles.partners.description}>Today’s supply chains carry an unprecedented complexity, understanding the role of any given company in the vast interconnected network that is every supply chain.</p>
+            <p style={styles.partners.description}>We use machine learning and graph theory to aggregate all available data, our current model is spanning into the millions of nodes and edges.</p>
+            <p style={styles.partners.description}>We monitor employment, formality, clients, taxes, asset purchases, suppliers and more.</p>
+            <p style={styles.partners.description}>We provide financial institutions with the ability to drill down and understand our score cards to better take the decisions.</p>
             <Buttom
               style={styles.partners.buttom}
               color="transparent"

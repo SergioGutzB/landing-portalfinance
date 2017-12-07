@@ -121,6 +121,8 @@ export const styles = {
       ...text,
       textAlign: 'left',
       fontSize: '1rem',
+      paddingBottom: 5,
+      paddingTop: 5,
       '@media (max-width: 490px)': {
         textAlign: 'center',
         width: '70%',

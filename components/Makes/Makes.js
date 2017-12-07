@@ -19,7 +19,7 @@ class Makes extends React.Component {
     const array_w = [{ "id":"1","image": setting, "title":"Process Automation","text":"We focus on automating the key processes for financial institutions to help them scale their current factoring and confirming operations without scaling their operational costs. By providing an automated approach to customer onboarding using digital contracts, to automated debtor approval of invoices."}
       ,{ "id":"2","image": safeMoney, "title":"Risk Management", "text":"We Manage your Risk Exposure.Our model uses advanced algorithms based on the invoicing patterns of each economic sector. We monitor not only invoicing but also purchases, tax ledgers, payrolls, asset purchases as well as financing behaviour to assess an opportunity."}
       ,{ "id":"3","image": customer, "title":"Customer Acquisition","text":"We help you leverage your Relationships. Automated onboarding, Debtor Lead Programs and API’s allow us to create multiple acquisition channels for financial institutions to scale their operations while drastically reducing their customer acquisition cost."}
-      ,{ "id":"4","image": search, "title":"Accountability & Traceability","text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." }
+      ,{ "id":"4","image": search, "title":"Accountability & Traceability","text":"Every Transaction is auditable on the spot." }
     ];
 
     const style = this.props.style? this.props.style : {}

@@ -19,10 +19,10 @@ const contact = () => {
         {phoneIcon("dcaicedo@portalfinance.co", <Mail style={styles.icon} />, null)}
       </div>
       <div style={styles.contact}>·
-        {phoneIcon("(510) 757-9431", <Usa style={styles.flag_icon} />)}
-        {phoneIcon("+5713571162", <Colombia style={styles.flag_icon} />)}
-        {phoneIcon("+525536877136", <Mexico style={styles.flag_icon} />)}
-        {phoneIcon("+56226665884", <Chile style={styles.flag_icon} />)}
+        {phoneIcon("+1 (510) 757-9431", <Usa style={styles.flag_icon} />)}
+        {phoneIcon("+57 (1) 357-1162", <Colombia style={styles.flag_icon} />)}
+        {phoneIcon("+52 (553) 687-7136", <Mexico style={styles.flag_icon} />)}
+        {phoneIcon("+56 (2) 2666-5884", <Chile style={styles.flag_icon} />)}
       </div>
       <div style={styles.map}>
         <img src="../../static/images/mapa2.png" style={{height: 190, width: 'auto'}}/>
