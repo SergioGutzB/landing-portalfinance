@@ -48,7 +48,6 @@ class Header extends React.Component {
   }
 
   render () {
-    //console.log(offset);
     //let offsetScroll = offset? ((offset < 220) ? 0 : ((offset-220)/100 < 1)? (offset-220)/100 : 1) : 0  ;
     //let padding = !!offsetScroll? (45 - offsetScroll*45) : 45;
     //let logoHeight = !!offsetScroll? ((95 - offsetScroll*95) > 55? (95 - offsetScroll*95) : 55)  : 95;
