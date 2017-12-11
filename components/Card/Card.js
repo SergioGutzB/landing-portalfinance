@@ -3,6 +3,7 @@ import { styles } from './Card-style';
 import { variables } from '../../styles/variables';
 import Mail from '../../static/images/email2.svg';
 import Radium from 'radium';
+import TouchableHighlight from '../TouchableHighlight/TouchableHighlight';
 
 class Card extends React.Component {
 
@@ -31,7 +32,9 @@ class Card extends React.Component {
           <h3 style={styles.name}>{last_name}</h3>
           <p style={styles.description}>{description}</p>
           <a style={styles.link} href={"mailto:"+link} target="_top">
-            <Mail style={Object.assign({}, styles.mail, mail_style)} />
+            <TouchableHighlight>
+              <Mail style={Object.assign({}, styles.mail, mail_style)} />
+            </TouchableHighlight>
           </a>
         </div>
       </div>

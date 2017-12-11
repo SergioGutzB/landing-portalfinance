@@ -3,6 +3,7 @@ import { styles } from './Footer-style';
 import { variables } from '../../styles/variables';
 import Mail from '../../static/images/email2.svg';
 import Radium from 'radium';
+import TouchableHighlight from '../TouchableHighlight/TouchableHighlight';
 
 const fb = '../../static/images/facebook.png';
 const tw = '../../static/images/twitter.png';
@@ -22,21 +23,27 @@ class Footer extends React.Component {
           <p style={styles.copyright}>Copyright © 2017, PortalFinance</p>
         </div>
         <div style={styles.social}>
-          <div style={styles.element_social}>
-            <div style={styles.icon_area}>
-              <img src={fb} style={styles.social_icon}/>
+          <TouchableHighlight>
+            <div style={styles.element_social}>
+              <div style={styles.icon_area}>
+                <img src={fb} style={styles.social_icon}/>
+              </div>
             </div>
-          </div>
-          <div style={styles.element_social}>
-            <div style={styles.icon_area}>
-              <img src={tw} style={styles.social_icon}/>
+          </TouchableHighlight>
+          <TouchableHighlight>
+            <div style={styles.element_social}>
+              <div style={styles.icon_area}>
+                <img src={tw} style={styles.social_icon}/>
+              </div>
             </div>
-          </div>
-          <div style={styles.element_social}>
-            <div style={styles.icon_area}>
-              <img src={inst} style={styles.social_icon}/>
+          </TouchableHighlight>
+          <TouchableHighlight>
+            <div style={styles.element_social}>
+              <div style={styles.icon_area}>
+                <img src={inst} style={styles.social_icon}/>
+              </div>
             </div>
-          </div>
+          </TouchableHighlight>
         </div>
       </div>
       )
