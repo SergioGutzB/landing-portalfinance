@@ -1,4 +1,5 @@
 import React from 'react';
+import a from 'next/link';
 import { styles } from './Footer-style';
 import { variables } from '../../styles/variables';
 import Mail from '../../static/images/email2.svg';
@@ -24,25 +25,31 @@ class Footer extends React.Component {
         </div>
         <div style={styles.social}>
           <TouchableHighlight>
-            <div style={styles.element_social}>
-              <div style={styles.icon_area}>
-                <img src={fb} style={styles.social_icon}/>
+            <a href='https://www.facebook.com/portalfinance/' target="_blank">
+              <div style={styles.element_social}>
+                <div style={styles.icon_area}>
+                  <img src={fb} style={styles.social_icon}/>
+                </div>
               </div>
-            </div>
+            </a>
           </TouchableHighlight>
           <TouchableHighlight>
-            <div style={styles.element_social}>
-              <div style={styles.icon_area}>
-                <img src={tw} style={styles.social_icon}/>
+            <a href='https://twitter.com/portalfinance?lang=en' target="_blank">
+              <div style={styles.element_social}>
+                <div style={styles.icon_area}>
+                  <img src={tw} style={styles.social_icon}/>
+                </div>
               </div>
-            </div>
+            </a>
           </TouchableHighlight>
           <TouchableHighlight>
-            <div style={styles.element_social}>
-              <div style={styles.icon_area}>
-                <img src={inst} style={styles.social_icon}/>
+            <a href='https://www.instagram.com/portalfinance/?hl=en' target="_blank">
+              <div style={styles.element_social}>
+                <div style={styles.icon_area}>
+                  <img src={inst} style={styles.social_icon}/>
+                </div>
               </div>
-            </div>
+            </a>
           </TouchableHighlight>
         </div>
       </div>
