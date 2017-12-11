@@ -16,7 +16,7 @@ const contact = () => {
       <div style={styles.contact}>
         <div style={styles.title}>CONTACT US</div>
         {phoneIcon("401 Charmany Dr Madison, Wi ,53719", <Location style={styles.icon} />, null)}
-        {phoneIcon("dcaicedo@portalfinance.co", <Mail style={styles.icon} />, null)}
+        {phoneIcon("dcaicedo@portalfinance.co", <Mail style={styles.icon} />, null, true)}
       </div>
       <div style={styles.contact}>·
         {phoneIcon("+1 (510) 757-9431", <Usa style={styles.flag_icon} />)}
@@ -31,14 +31,17 @@ const contact = () => {
   );
 }
 
-const phoneIcon = (text, flag = null, icon=<Phone style={styles.icon}/>) => {
+const phoneIcon = (text, flag = null, icon=<Phone style={styles.icon}/>, link = false) => {
   return (
     <div style={styles.element}>
       <div style={styles.icon_area}>
         {icon}
         {flag}
       </div>
-      <div style={styles.text}>{text}</div>
+      {link?
+      <div style={styles.text}><a style={styles.link} href={"malto:"+text}>{text}</a></div>
+      : <div style={styles.text}>{text}</div>
+      }
     </div>
   )
 }

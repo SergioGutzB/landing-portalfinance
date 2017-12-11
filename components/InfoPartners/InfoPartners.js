@@ -23,16 +23,18 @@ class InfoPartners extends React.Component {
         text: [
           "If you are are a provider of e-Invoicing in any form ERP, Invoicing, Accounting or any other B2B focused application looking to integrate and provide in app financing not only providing your users with a real and tangible added value but also generating a new revenue stream for your company.",
           //"If you have not yet integrated an e-Invoicing solution we can guide you through the process in any of the 10 Latin American Countries though our partnership with Gosocket (www.gosocket.net).",
-          "If you would like to know more reach out to partners@portalfinance.co"
+          "If you would like to know more reach out to"
         ],
+        email: "partners@portalfinance.co",
         color: variables.light_blue,
       },
       {
         title: "FINANCIAL INSTITUTIONS",
         text: [
           "If you are a bank or commercial factoring looking to integrate and leverage out solutions to compliment your current factoring operations reach out to partners@portalfinance.co. We will sit down and understand your goals and support you through the entire design - development - deployment process.",
-          "Looking for a complete turn key solution that will integrate into your current corporate stack, reach out directly to dcaicedo@portalfinance.co"
+          "Looking for a complete turn key solution that will integrate into your current corporate stack, reach out directly to"
         ],
+        email: "dcaicedo@portalfinance.co",
         color: variables.jade,
       }
     ]
@@ -46,7 +48,7 @@ class InfoPartners extends React.Component {
         </div>
         <div style={styles.content}>
           {partners.map((p, index) =>
-              <CardPartner key={index} title={p.title} text={p.text} color={p.color}/>
+              <CardPartner key={index} title={p.title} text={p.text} color={p.color} email={p.email}/>
             )
           }
         </div>

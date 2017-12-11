@@ -97,5 +97,13 @@ export const styles = {
     '@media (max-width: 620px)': {
       display: 'none',
     },
+  },
+  link: {
+    color: 'white',
+    textDecoration: 'none',
+    ':hover':{
+      color: 'white',
+      fontWeight: 900,
+    }
   }
 }

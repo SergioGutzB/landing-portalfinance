@@ -9,7 +9,7 @@ class CardPartner extends React.Component {
   }
 
   render () {
-    const {title, text, color} = this.props;
+    const {title, text, color, email} = this.props;
 
     const style = {
       backgroundColor: color? color : "white",
@@ -21,6 +21,7 @@ class CardPartner extends React.Component {
        {text? text.map((t, index) =>
          <p style={styles.card.text} key={index}>{t}</p>
        ): null}
+       <a style={styles.email} href={'mailto:'+email} >{email}</a>
      </div>
     )
   }

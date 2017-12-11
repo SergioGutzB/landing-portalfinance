@@ -55,7 +55,7 @@ export const styles = {
     text: {
       ...text,
       fontSize: '1rem',
-      padding: '8px 20px',
+      padding: '16px 20px 0px',
       lineHeight: 1.4,
       fontWeight: 100,
       '@media (max-width: 490px)': {
@@ -80,6 +80,16 @@ export const styles = {
         width: '55%',
         fontSize: '1rem',
       },
+    }
+  },
+  email: {
+    //width: '100%',
+    textAlign: 'center',
+    color: 'white',
+    textDecoration: 'none',
+    ':hover' : {
+      color: 'white',
+      fontWeight: 600,
     }
   }
 }
